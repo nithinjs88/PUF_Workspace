@@ -1,0 +1,1 @@
+"./Flash.obj" "./delay.obj" "./hello.obj" "./led.obj" "./print_result.obj" "./uart.obj" "../lnk_msp430f2618.cmd" -l"libc.a" 

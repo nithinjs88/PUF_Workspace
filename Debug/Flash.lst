@@ -1,0 +1,1697 @@
+MSP430 Assembler PC v4.4.3 Sat Aug 08 16:59:34 2015
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+Flash.asm                                                            PAGE    1
+
+       1            ;******************************************************************************
+       2            ;* MSP430 C/C++ Codegen                                             PC v4.4.3 *
+       3            ;* Date/Time created: Sat Aug 08 16:59:34 2015                                *
+       4            ;******************************************************************************
+       5                    .compiler_opts --abi=eabi --diag_wrap=off --hll_source=on --mem_model:code=large --mem_model:d
+       6            
+       7            $C$DW$CU        .dwtag  DW_TAG_compile_unit
+       8                    .dwattr $C$DW$CU, DW_AT_name("../Flash.c")
+       9                    .dwattr $C$DW$CU, DW_AT_producer("TI MSP430 C/C++ Codegen PC v4.4.3 Copyright (c) 2003-2015 Te
+      10                    .dwattr $C$DW$CU, DW_AT_TI_version(0x01)
+      11                    .dwattr $C$DW$CU, DW_AT_comp_dir("F:\Study\Work\CCS_Workspace\PUF\Debug")
+      12            
+      13            $C$DW$1 .dwtag  DW_TAG_subprogram, DW_AT_name("delay_500_ms")
+      14                    .dwattr $C$DW$1, DW_AT_TI_symbol_name("delay_500_ms")
+      15                    .dwattr $C$DW$1, DW_AT_declaration
+      16                    .dwattr $C$DW$1, DW_AT_external
+      17                    .dwattr $C$DW$1, DW_AT_decl_file("F:\Study\MTech\Project\PUFF DATA IIT-M(From Anthony)\PUF Gen
+      18                    .dwattr $C$DW$1, DW_AT_decl_line(0x07)
+      19                    .dwattr $C$DW$1, DW_AT_decl_column(0x06)
+      20            
+      21            $C$DW$2 .dwtag  DW_TAG_subprogram, DW_AT_name("print_string")
+      22                    .dwattr $C$DW$2, DW_AT_TI_symbol_name("print_string")
+      23                    .dwattr $C$DW$2, DW_AT_declaration
+      24                    .dwattr $C$DW$2, DW_AT_external
+      25                    .dwattr $C$DW$2, DW_AT_decl_file("F:\Study\MTech\Project\PUFF DATA IIT-M(From Anthony)\PUF Gen
+      26                    .dwattr $C$DW$2, DW_AT_decl_line(0x0a)
+      27                    .dwattr $C$DW$2, DW_AT_decl_column(0x06)
+      28            $C$DW$3 .dwtag  DW_TAG_formal_parameter
+      29                    .dwattr $C$DW$3, DW_AT_type(*$C$DW$T$22)
+      30                    .dwendtag $C$DW$2
+      31            
+      32            
+      33            $C$DW$4 .dwtag  DW_TAG_subprogram, DW_AT_name("print_raw")
+      34                    .dwattr $C$DW$4, DW_AT_TI_symbol_name("print_raw")
+      35                    .dwattr $C$DW$4, DW_AT_declaration
+      36                    .dwattr $C$DW$4, DW_AT_external
+      37                    .dwattr $C$DW$4, DW_AT_decl_file("F:\Study\MTech\Project\PUFF DATA IIT-M(From Anthony)\PUF Gen
+      38                    .dwattr $C$DW$4, DW_AT_decl_line(0x0b)
+      39                    .dwattr $C$DW$4, DW_AT_decl_column(0x06)
+      40            $C$DW$5 .dwtag  DW_TAG_formal_parameter
+      41                    .dwattr $C$DW$5, DW_AT_type(*$C$DW$T$6)
+      42                    .dwendtag $C$DW$4
+      43            
+      44            $C$DW$6 .dwtag  DW_TAG_variable, DW_AT_name("IE2")
+      45                    .dwattr $C$DW$6, DW_AT_TI_symbol_name("IE2")
+      46                    .dwattr $C$DW$6, DW_AT_type(*$C$DW$T$36)
+      47                    .dwattr $C$DW$6, DW_AT_declaration
+      48                    .dwattr $C$DW$6, DW_AT_external
+      49                    .dwattr $C$DW$6, DW_AT_decl_file("D:/Program Files/ccsv6/ccs_base/msp430/include/msp430f2618.h
+      50                    .dwattr $C$DW$6, DW_AT_decl_line(0xab)
+      51                    .dwattr $C$DW$6, DW_AT_decl_column(0x01)
+      52            $C$DW$7 .dwtag  DW_TAG_variable, DW_AT_name("IFG2")
+      53                    .dwattr $C$DW$7, DW_AT_TI_symbol_name("IFG2")
+      54                    .dwattr $C$DW$7, DW_AT_type(*$C$DW$T$36)
+      55                    .dwattr $C$DW$7, DW_AT_declaration
+MSP430 Assembler PC v4.4.3 Sat Aug 08 16:59:34 2015
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+Flash.asm                                                            PAGE    2
+
+      56                    .dwattr $C$DW$7, DW_AT_external
+      57                    .dwattr $C$DW$7, DW_AT_decl_file("D:/Program Files/ccsv6/ccs_base/msp430/include/msp430f2618.h
+      58                    .dwattr $C$DW$7, DW_AT_decl_line(0xb2)
+      59                    .dwattr $C$DW$7, DW_AT_decl_column(0x01)
+      60            $C$DW$8 .dwtag  DW_TAG_variable, DW_AT_name("DCOCTL")
+      61                    .dwattr $C$DW$8, DW_AT_TI_symbol_name("DCOCTL")
+      62                    .dwattr $C$DW$8, DW_AT_type(*$C$DW$T$36)
+      63                    .dwattr $C$DW$8, DW_AT_declaration
+      64                    .dwattr $C$DW$8, DW_AT_external
+      65                    .dwattr $C$DW$8, DW_AT_decl_file("D:/Program Files/ccsv6/ccs_base/msp430/include/msp430f2618.h
+      66                    .dwattr $C$DW$8, DW_AT_decl_line(0x1a8)
+      67                    .dwattr $C$DW$8, DW_AT_decl_column(0x01)
+      68            $C$DW$9 .dwtag  DW_TAG_variable, DW_AT_name("BCSCTL1")
+      69                    .dwattr $C$DW$9, DW_AT_TI_symbol_name("BCSCTL1")
+      70                    .dwattr $C$DW$9, DW_AT_type(*$C$DW$T$36)
+      71                    .dwattr $C$DW$9, DW_AT_declaration
+      72                    .dwattr $C$DW$9, DW_AT_external
+      73                    .dwattr $C$DW$9, DW_AT_decl_file("D:/Program Files/ccsv6/ccs_base/msp430/include/msp430f2618.h
+      74                    .dwattr $C$DW$9, DW_AT_decl_line(0x1a9)
+      75                    .dwattr $C$DW$9, DW_AT_decl_column(0x01)
+      76            $C$DW$10        .dwtag  DW_TAG_variable, DW_AT_name("P3OUT")
+      77                    .dwattr $C$DW$10, DW_AT_TI_symbol_name("P3OUT")
+      78                    .dwattr $C$DW$10, DW_AT_type(*$C$DW$T$36)
+      79                    .dwattr $C$DW$10, DW_AT_declaration
+      80                    .dwattr $C$DW$10, DW_AT_external
+      81                    .dwattr $C$DW$10, DW_AT_decl_file("D:/Program Files/ccsv6/ccs_base/msp430/include/msp430f2618.
+      82                    .dwattr $C$DW$10, DW_AT_decl_line(0x33c)
+      83                    .dwattr $C$DW$10, DW_AT_decl_column(0x01)
+      84            $C$DW$11        .dwtag  DW_TAG_variable, DW_AT_name("P3DIR")
+      85                    .dwattr $C$DW$11, DW_AT_TI_symbol_name("P3DIR")
+      86                    .dwattr $C$DW$11, DW_AT_type(*$C$DW$T$36)
+      87                    .dwattr $C$DW$11, DW_AT_declaration
+      88                    .dwattr $C$DW$11, DW_AT_external
+      89                    .dwattr $C$DW$11, DW_AT_decl_file("D:/Program Files/ccsv6/ccs_base/msp430/include/msp430f2618.
+      90                    .dwattr $C$DW$11, DW_AT_decl_line(0x33d)
+      91                    .dwattr $C$DW$11, DW_AT_decl_column(0x01)
+      92            $C$DW$12        .dwtag  DW_TAG_variable, DW_AT_name("P3SEL")
+      93                    .dwattr $C$DW$12, DW_AT_TI_symbol_name("P3SEL")
+      94                    .dwattr $C$DW$12, DW_AT_type(*$C$DW$T$36)
+      95                    .dwattr $C$DW$12, DW_AT_declaration
+      96                    .dwattr $C$DW$12, DW_AT_external
+      97                    .dwattr $C$DW$12, DW_AT_decl_file("D:/Program Files/ccsv6/ccs_base/msp430/include/msp430f2618.
+      98                    .dwattr $C$DW$12, DW_AT_decl_line(0x33e)
+      99                    .dwattr $C$DW$12, DW_AT_decl_column(0x01)
+     100            $C$DW$13        .dwtag  DW_TAG_variable, DW_AT_name("UCA0CTL0")
+     101                    .dwattr $C$DW$13, DW_AT_TI_symbol_name("UCA0CTL0")
+     102                    .dwattr $C$DW$13, DW_AT_type(*$C$DW$T$36)
+     103                    .dwattr $C$DW$13, DW_AT_declaration
+     104                    .dwattr $C$DW$13, DW_AT_external
+     105                    .dwattr $C$DW$13, DW_AT_decl_file("D:/Program Files/ccsv6/ccs_base/msp430/include/msp430f2618.
+     106                    .dwattr $C$DW$13, DW_AT_decl_line(0x486)
+     107                    .dwattr $C$DW$13, DW_AT_decl_column(0x01)
+     108            $C$DW$14        .dwtag  DW_TAG_variable, DW_AT_name("UCA0CTL1")
+     109                    .dwattr $C$DW$14, DW_AT_TI_symbol_name("UCA0CTL1")
+     110                    .dwattr $C$DW$14, DW_AT_type(*$C$DW$T$36)
+MSP430 Assembler PC v4.4.3 Sat Aug 08 16:59:34 2015
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+Flash.asm                                                            PAGE    3
+
+     111                    .dwattr $C$DW$14, DW_AT_declaration
+     112                    .dwattr $C$DW$14, DW_AT_external
+     113                    .dwattr $C$DW$14, DW_AT_decl_file("D:/Program Files/ccsv6/ccs_base/msp430/include/msp430f2618.
+     114                    .dwattr $C$DW$14, DW_AT_decl_line(0x487)
+     115                    .dwattr $C$DW$14, DW_AT_decl_column(0x01)
+     116            $C$DW$15        .dwtag  DW_TAG_variable, DW_AT_name("UCA0BR0")
+     117                    .dwattr $C$DW$15, DW_AT_TI_symbol_name("UCA0BR0")
+     118                    .dwattr $C$DW$15, DW_AT_type(*$C$DW$T$36)
+     119                    .dwattr $C$DW$15, DW_AT_declaration
+     120                    .dwattr $C$DW$15, DW_AT_external
+     121                    .dwattr $C$DW$15, DW_AT_decl_file("D:/Program Files/ccsv6/ccs_base/msp430/include/msp430f2618.
+     122                    .dwattr $C$DW$15, DW_AT_decl_line(0x488)
+     123                    .dwattr $C$DW$15, DW_AT_decl_column(0x01)
+     124            $C$DW$16        .dwtag  DW_TAG_variable, DW_AT_name("UCA0BR1")
+     125                    .dwattr $C$DW$16, DW_AT_TI_symbol_name("UCA0BR1")
+     126                    .dwattr $C$DW$16, DW_AT_type(*$C$DW$T$36)
+     127                    .dwattr $C$DW$16, DW_AT_declaration
+     128                    .dwattr $C$DW$16, DW_AT_external
+     129                    .dwattr $C$DW$16, DW_AT_decl_file("D:/Program Files/ccsv6/ccs_base/msp430/include/msp430f2618.
+     130                    .dwattr $C$DW$16, DW_AT_decl_line(0x489)
+     131                    .dwattr $C$DW$16, DW_AT_decl_column(0x01)
+     132            $C$DW$17        .dwtag  DW_TAG_variable, DW_AT_name("UCA0MCTL")
+     133                    .dwattr $C$DW$17, DW_AT_TI_symbol_name("UCA0MCTL")
+     134                    .dwattr $C$DW$17, DW_AT_type(*$C$DW$T$36)
+     135                    .dwattr $C$DW$17, DW_AT_declaration
+     136                    .dwattr $C$DW$17, DW_AT_external
+     137                    .dwattr $C$DW$17, DW_AT_decl_file("D:/Program Files/ccsv6/ccs_base/msp430/include/msp430f2618.
+     138                    .dwattr $C$DW$17, DW_AT_decl_line(0x48a)
+     139                    .dwattr $C$DW$17, DW_AT_decl_column(0x01)
+     140            $C$DW$18        .dwtag  DW_TAG_variable, DW_AT_name("UCA0RXBUF")
+     141                    .dwattr $C$DW$18, DW_AT_TI_symbol_name("UCA0RXBUF")
+     142                    .dwattr $C$DW$18, DW_AT_type(*$C$DW$T$36)
+     143                    .dwattr $C$DW$18, DW_AT_declaration
+     144                    .dwattr $C$DW$18, DW_AT_external
+     145                    .dwattr $C$DW$18, DW_AT_decl_file("D:/Program Files/ccsv6/ccs_base/msp430/include/msp430f2618.
+     146                    .dwattr $C$DW$18, DW_AT_decl_line(0x48c)
+     147                    .dwattr $C$DW$18, DW_AT_decl_column(0x01)
+     148            $C$DW$19        .dwtag  DW_TAG_variable, DW_AT_name("UCA0TXBUF")
+     149                    .dwattr $C$DW$19, DW_AT_TI_symbol_name("UCA0TXBUF")
+     150                    .dwattr $C$DW$19, DW_AT_type(*$C$DW$T$36)
+     151                    .dwattr $C$DW$19, DW_AT_declaration
+     152                    .dwattr $C$DW$19, DW_AT_external
+     153                    .dwattr $C$DW$19, DW_AT_decl_file("D:/Program Files/ccsv6/ccs_base/msp430/include/msp430f2618.
+     154                    .dwattr $C$DW$19, DW_AT_decl_line(0x48d)
+     155                    .dwattr $C$DW$19, DW_AT_decl_column(0x01)
+     156                    .global flash_interface
+     157 000000               .sect   ".data:flash_interface", RW
+     158                    .clink
+     159                    .align  2
+     160                    .elfsym flash_interface,SYM_SIZE(54)
+     161 000000       flash_interface:
+     162 000000 0049          .bits   73,8                    ; flash_interface[0] @ 0
+     163 000000 6E49          .bits   110,8                   ; flash_interface[1] @ 8
+     164 000002 0069          .bits   105,8                   ; flash_interface[2] @ 16
+     165 000002 7469          .bits   116,8                   ; flash_interface[3] @ 24
+MSP430 Assembler PC v4.4.3 Sat Aug 08 16:59:34 2015
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+Flash.asm                                                            PAGE    4
+
+     166 000004 0069          .bits   105,8                   ; flash_interface[4] @ 32
+     167 000004 6C69          .bits   108,8                   ; flash_interface[5] @ 40
+     168 000006 0069          .bits   105,8                   ; flash_interface[6] @ 48
+     169 000006 7A69          .bits   122,8                   ; flash_interface[7] @ 56
+     170 000008 0061          .bits   97,8                    ; flash_interface[8] @ 64
+     171 000008 7461          .bits   116,8                   ; flash_interface[9] @ 72
+     172 00000a 0069          .bits   105,8                   ; flash_interface[10] @ 80
+     173 00000a 6F69          .bits   111,8                   ; flash_interface[11] @ 88
+     174 00000c 006E          .bits   110,8                   ; flash_interface[12] @ 96
+     175 00000c 206E          .bits   32,8                    ; flash_interface[13] @ 104
+     176 00000e 006F          .bits   111,8                   ; flash_interface[14] @ 112
+     177 00000e 666F          .bits   102,8                   ; flash_interface[15] @ 120
+     178 000010 0020          .bits   32,8                    ; flash_interface[16] @ 128
+     179 000010 5320          .bits   83,8                    ; flash_interface[17] @ 136
+     180 000012 0050          .bits   80,8                    ; flash_interface[18] @ 144
+     181 000012 4950          .bits   73,8                    ; flash_interface[19] @ 152
+     182 000014 0020          .bits   32,8                    ; flash_interface[20] @ 160
+     183 000014 6920          .bits   105,8                   ; flash_interface[21] @ 168
+     184 000016 006E          .bits   110,8                   ; flash_interface[22] @ 176
+     185 000016 746E          .bits   116,8                   ; flash_interface[23] @ 184
+     186 000018 0065          .bits   101,8                   ; flash_interface[24] @ 192
+     187 000018 7265          .bits   114,8                   ; flash_interface[25] @ 200
+     188 00001a 0066          .bits   102,8                   ; flash_interface[26] @ 208
+     189 00001a 6166          .bits   97,8                    ; flash_interface[27] @ 216
+     190 00001c 0063          .bits   99,8                    ; flash_interface[28] @ 224
+     191 00001c 6563          .bits   101,8                   ; flash_interface[29] @ 232
+     192 00001e 0020          .bits   32,8                    ; flash_interface[30] @ 240
+     193 00001e 7720          .bits   119,8                   ; flash_interface[31] @ 248
+     194 000020 0069          .bits   105,8                   ; flash_interface[32] @ 256
+     195 000020 7469          .bits   116,8                   ; flash_interface[33] @ 264
+     196 000022 0068          .bits   104,8                   ; flash_interface[34] @ 272
+     197 000022 2068          .bits   32,8                    ; flash_interface[35] @ 280
+     198 000024 006F          .bits   111,8                   ; flash_interface[36] @ 288
+     199 000024 6E6F          .bits   110,8                   ; flash_interface[37] @ 296
+     200 000026 0020          .bits   32,8                    ; flash_interface[38] @ 304
+     201 000026 4220          .bits   66,8                    ; flash_interface[39] @ 312
+     202 000028 006F          .bits   111,8                   ; flash_interface[40] @ 320
+     203 000028 616F          .bits   97,8                    ; flash_interface[41] @ 328
+     204 00002a 0072          .bits   114,8                   ; flash_interface[42] @ 336
+     205 00002a 6472          .bits   100,8                   ; flash_interface[43] @ 344
+     206 00002c 0020          .bits   32,8                    ; flash_interface[44] @ 352
+     207 00002c 4620          .bits   70,8                    ; flash_interface[45] @ 360
+     208 00002e 006C          .bits   108,8                   ; flash_interface[46] @ 368
+     209 00002e 616C          .bits   97,8                    ; flash_interface[47] @ 376
+     210 000030 0073          .bits   115,8                   ; flash_interface[48] @ 384
+     211 000030 6873          .bits   104,8                   ; flash_interface[49] @ 392
+     212 000032 000A          .bits   10,8                    ; flash_interface[50] @ 400
+     213 000032 0D0A          .bits   13,8                    ; flash_interface[51] @ 408
+     214 000034 0000          .bits   0,8                     ; flash_interface[52] @ 416
+     215            
+     216            $C$DW$20        .dwtag  DW_TAG_variable, DW_AT_name("flash_interface")
+     217                    .dwattr $C$DW$20, DW_AT_TI_symbol_name("flash_interface")
+     218                    .dwattr $C$DW$20, DW_AT_location[DW_OP_addr flash_interface]
+     219                    .dwattr $C$DW$20, DW_AT_type(*$C$DW$T$41)
+     220                    .dwattr $C$DW$20, DW_AT_external
+MSP430 Assembler PC v4.4.3 Sat Aug 08 16:59:34 2015
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+Flash.asm                                                            PAGE    5
+
+     221                    .dwattr $C$DW$20, DW_AT_decl_file("../Flash.c")
+     222                    .dwattr $C$DW$20, DW_AT_decl_line(0x04)
+     223                    .dwattr $C$DW$20, DW_AT_decl_column(0x06)
+     224                    .global write
+     225 000000               .sect   ".data:write", RW
+     226                    .clink
+     227                    .align  2
+     228                    .elfsym write,SYM_SIZE(44)
+     229 000000       write:
+     230 000000 0044          .bits   68,8                    ; write[0] @ 0
+     231 000000 6144          .bits   97,8                    ; write[1] @ 8
+     232 000002 0074          .bits   116,8                   ; write[2] @ 16
+     233 000002 6174          .bits   97,8                    ; write[3] @ 24
+     234 000004 0020          .bits   32,8                    ; write[4] @ 32
+     235 000004 6920          .bits   105,8                   ; write[5] @ 40
+     236 000006 0073          .bits   115,8                   ; write[6] @ 48
+     237 000006 2073          .bits   32,8                    ; write[7] @ 56
+     238 000008 0073          .bits   115,8                   ; write[8] @ 64
+     239 000008 7573          .bits   117,8                   ; write[9] @ 72
+     240 00000a 0063          .bits   99,8                    ; write[10] @ 80
+     241 00000a 6363          .bits   99,8                    ; write[11] @ 88
+     242 00000c 0065          .bits   101,8                   ; write[12] @ 96
+     243 00000c 7365          .bits   115,8                   ; write[13] @ 104
+     244 00000e 0073          .bits   115,8                   ; write[14] @ 112
+     245 00000e 6673          .bits   102,8                   ; write[15] @ 120
+     246 000010 0075          .bits   117,8                   ; write[16] @ 128
+     247 000010 6C75          .bits   108,8                   ; write[17] @ 136
+     248 000012 006C          .bits   108,8                   ; write[18] @ 144
+     249 000012 796C          .bits   121,8                   ; write[19] @ 152
+     250 000014 0020          .bits   32,8                    ; write[20] @ 160
+     251 000014 5720          .bits   87,8                    ; write[21] @ 168
+     252 000016 0072          .bits   114,8                   ; write[22] @ 176
+     253 000016 6972          .bits   105,8                   ; write[23] @ 184
+     254 000018 0074          .bits   116,8                   ; write[24] @ 192
+     255 000018 6574          .bits   101,8                   ; write[25] @ 200
+     256 00001a 006E          .bits   110,8                   ; write[26] @ 208
+     257 00001a 206E          .bits   32,8                    ; write[27] @ 216
+     258 00001c 0069          .bits   105,8                   ; write[28] @ 224
+     259 00001c 6E69          .bits   110,8                   ; write[29] @ 232
+     260 00001e 0020          .bits   32,8                    ; write[30] @ 240
+     261 00001e 4D20          .bits   77,8                    ; write[31] @ 248
+     262 000020 0065          .bits   101,8                   ; write[32] @ 256
+     263 000020 6D65          .bits   109,8                   ; write[33] @ 264
+     264 000022 006F          .bits   111,8                   ; write[34] @ 272
+     265 000022 726F          .bits   114,8                   ; write[35] @ 280
+     266 000024 0079          .bits   121,8                   ; write[36] @ 288
+     267 000024 2079          .bits   32,8                    ; write[37] @ 296
+     268 000026 0021          .bits   33,8                    ; write[38] @ 304
+     269 000026 2121          .bits   33,8                    ; write[39] @ 312
+     270 000028 000A          .bits   10,8                    ; write[40] @ 320
+     271 000028 0D0A          .bits   13,8                    ; write[41] @ 328
+     272 00002a 0000          .bits   0,8                     ; write[42] @ 336
+     273            
+     274            $C$DW$21        .dwtag  DW_TAG_variable, DW_AT_name("write")
+     275                    .dwattr $C$DW$21, DW_AT_TI_symbol_name("write")
+MSP430 Assembler PC v4.4.3 Sat Aug 08 16:59:34 2015
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+Flash.asm                                                            PAGE    6
+
+     276                    .dwattr $C$DW$21, DW_AT_location[DW_OP_addr write]
+     277                    .dwattr $C$DW$21, DW_AT_type(*$C$DW$T$42)
+     278                    .dwattr $C$DW$21, DW_AT_external
+     279                    .dwattr $C$DW$21, DW_AT_decl_file("../Flash.c")
+     280                    .dwattr $C$DW$21, DW_AT_decl_line(0x05)
+     281                    .dwattr $C$DW$21, DW_AT_decl_column(0x06)
+     282                    .global read
+     283 000000               .sect   ".data:read", RW
+     284                    .clink
+     285                    .align  2
+     286                    .elfsym read,SYM_SIZE(44)
+     287 000000       read:
+     288 000000 0044          .bits   68,8                    ; read[0] @ 0
+     289 000000 6144          .bits   97,8                    ; read[1] @ 8
+     290 000002 0074          .bits   116,8                   ; read[2] @ 16
+     291 000002 6174          .bits   97,8                    ; read[3] @ 24
+     292 000004 0020          .bits   32,8                    ; read[4] @ 32
+     293 000004 6920          .bits   105,8                   ; read[5] @ 40
+     294 000006 0073          .bits   115,8                   ; read[6] @ 48
+     295 000006 2073          .bits   32,8                    ; read[7] @ 56
+     296 000008 0073          .bits   115,8                   ; read[8] @ 64
+     297 000008 7573          .bits   117,8                   ; read[9] @ 72
+     298 00000a 0063          .bits   99,8                    ; read[10] @ 80
+     299 00000a 6363          .bits   99,8                    ; read[11] @ 88
+     300 00000c 0065          .bits   101,8                   ; read[12] @ 96
+     301 00000c 7365          .bits   115,8                   ; read[13] @ 104
+     302 00000e 0073          .bits   115,8                   ; read[14] @ 112
+     303 00000e 6673          .bits   102,8                   ; read[15] @ 120
+     304 000010 0075          .bits   117,8                   ; read[16] @ 128
+     305 000010 6C75          .bits   108,8                   ; read[17] @ 136
+     306 000012 006C          .bits   108,8                   ; read[18] @ 144
+     307 000012 796C          .bits   121,8                   ; read[19] @ 152
+     308 000014 0020          .bits   32,8                    ; read[20] @ 160
+     309 000014 5220          .bits   82,8                    ; read[21] @ 168
+     310 000016 0065          .bits   101,8                   ; read[22] @ 176
+     311 000016 6165          .bits   97,8                    ; read[23] @ 184
+     312 000018 0064          .bits   100,8                   ; read[24] @ 192
+     313 000018 2064          .bits   32,8                    ; read[25] @ 200
+     314 00001a 0066          .bits   102,8                   ; read[26] @ 208
+     315 00001a 7266          .bits   114,8                   ; read[27] @ 216
+     316 00001c 006F          .bits   111,8                   ; read[28] @ 224
+     317 00001c 6D6F          .bits   109,8                   ; read[29] @ 232
+     318 00001e 0020          .bits   32,8                    ; read[30] @ 240
+     319 00001e 4D20          .bits   77,8                    ; read[31] @ 248
+     320 000020 0065          .bits   101,8                   ; read[32] @ 256
+     321 000020 6D65          .bits   109,8                   ; read[33] @ 264
+     322 000022 006F          .bits   111,8                   ; read[34] @ 272
+     323 000022 726F          .bits   114,8                   ; read[35] @ 280
+     324 000024 0079          .bits   121,8                   ; read[36] @ 288
+     325 000024 2079          .bits   32,8                    ; read[37] @ 296
+     326 000026 0021          .bits   33,8                    ; read[38] @ 304
+     327 000026 2121          .bits   33,8                    ; read[39] @ 312
+     328 000028 000A          .bits   10,8                    ; read[40] @ 320
+     329 000028 0D0A          .bits   13,8                    ; read[41] @ 328
+     330 00002a 0000          .bits   0,8                     ; read[42] @ 336
+MSP430 Assembler PC v4.4.3 Sat Aug 08 16:59:34 2015
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+Flash.asm                                                            PAGE    7
+
+     331            
+     332            $C$DW$22        .dwtag  DW_TAG_variable, DW_AT_name("read")
+     333                    .dwattr $C$DW$22, DW_AT_TI_symbol_name("read")
+     334                    .dwattr $C$DW$22, DW_AT_location[DW_OP_addr read]
+     335                    .dwattr $C$DW$22, DW_AT_type(*$C$DW$T$42)
+     336                    .dwattr $C$DW$22, DW_AT_external
+     337                    .dwattr $C$DW$22, DW_AT_decl_file("../Flash.c")
+     338                    .dwattr $C$DW$22, DW_AT_decl_line(0x06)
+     339                    .dwattr $C$DW$22, DW_AT_decl_column(0x06)
+     340                    .common addr2$2,4,2
+     341                    .common data1$3,1,1
+     342            ;       D:\Program Files\ccsv6\tools\compiler\ti-cgt-msp430_4.4.3\bin\opt430.exe C:\\Users\\user\\AppD
+     343 000000               .sect   ".text:flash_m25p80_spi_addr_write"
+     344                    .clink
+     345                    .global flash_m25p80_spi_addr_write
+     346            
+     347            $C$DW$23        .dwtag  DW_TAG_subprogram, DW_AT_name("flash_m25p80_spi_addr_write")
+     348                    .dwattr $C$DW$23, DW_AT_low_pc(flash_m25p80_spi_addr_write)
+     349                    .dwattr $C$DW$23, DW_AT_high_pc(0x00)
+     350                    .dwattr $C$DW$23, DW_AT_TI_symbol_name("flash_m25p80_spi_addr_write")
+     351                    .dwattr $C$DW$23, DW_AT_external
+     352                    .dwattr $C$DW$23, DW_AT_type(*$C$DW$T$6)
+     353                    .dwattr $C$DW$23, DW_AT_TI_begin_file("../Flash.c")
+     354                    .dwattr $C$DW$23, DW_AT_TI_begin_line(0x09)
+     355                    .dwattr $C$DW$23, DW_AT_TI_begin_column(0x0f)
+     356                    .dwattr $C$DW$23, DW_AT_decl_file("../Flash.c")
+     357                    .dwattr $C$DW$23, DW_AT_decl_line(0x09)
+     358                    .dwattr $C$DW$23, DW_AT_decl_column(0x0f)
+     359                    .dwattr $C$DW$23, DW_AT_TI_max_frame_size(0x10)
+     360                    .dwpsn  file "../Flash.c",line 10,column 1,is_stmt,address flash_m25p80_spi_addr_write,isa 0
+     361            
+     362                    .dwfde $C$DW$CIE, flash_m25p80_spi_addr_write
+     363            $C$DW$24        .dwtag  DW_TAG_variable, DW_AT_name("addr2")
+     364                    .dwattr $C$DW$24, DW_AT_TI_symbol_name("addr2$2")
+     365                    .dwattr $C$DW$24, DW_AT_type(*$C$DW$T$13)
+     366                    .dwattr $C$DW$24, DW_AT_location[DW_OP_addr addr2$2]
+     367            $C$DW$25        .dwtag  DW_TAG_formal_parameter, DW_AT_name("addr1")
+     368                    .dwattr $C$DW$25, DW_AT_TI_symbol_name("addr1")
+     369                    .dwattr $C$DW$25, DW_AT_type(*$C$DW$T$13)
+     370                    .dwattr $C$DW$25, DW_AT_location[DW_OP_reg12 DW_OP_piece 2 DW_OP_reg13 DW_OP_piece 2]
+     371            $C$DW$26        .dwtag  DW_TAG_formal_parameter, DW_AT_name("data")
+     372                    .dwattr $C$DW$26, DW_AT_TI_symbol_name("data")
+     373                    .dwattr $C$DW$26, DW_AT_type(*$C$DW$T$6)
+     374                    .dwattr $C$DW$26, DW_AT_location[DW_OP_reg14]
+     375            $C$DW$27        .dwtag  DW_TAG_formal_parameter, DW_AT_name("length")
+     376                    .dwattr $C$DW$27, DW_AT_TI_symbol_name("length")
+     377                    .dwattr $C$DW$27, DW_AT_type(*$C$DW$T$11)
+     378                    .dwattr $C$DW$27, DW_AT_location[DW_OP_reg15]
+     379            
+     380            ;*****************************************************************************
+     381            ;* FUNCTION NAME: flash_m25p80_spi_addr_write                                *
+     382            ;*                                                                           *
+     383            ;*   Regs Modified     : SP,SR,r8,r9,r10,r11,r12,r13,r14,r15                 *
+     384            ;*   Regs Used         : SP,SR,r8,r9,r10,r11,r12,r13,r14,r15                 *
+     385            ;*   Local Frame Size  : 0 Args + 0 Auto + 12 Save = 12 byte                 *
+MSP430 Assembler PC v4.4.3 Sat Aug 08 16:59:34 2015
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+Flash.asm                                                            PAGE    8
+
+     386            ;*****************************************************************************
+     387 000000       flash_m25p80_spi_addr_write:
+     388            ;* --------------------------------------------------------------------------*
+     389                    .dwcfi  cfa_offset, 4
+     390                    .dwcfi  save_reg_to_mem, 16, -4
+     391 000000 142A          PUSHM.A   #3,r10                ; [] 
+     392                    .dwcfi  save_reg_to_mem, 10, -8
+     393                    .dwcfi  save_reg_to_mem, 9, -12
+     394                    .dwcfi  save_reg_to_mem, 8, -16
+     395                    .dwcfi  cfa_offset, 16
+     396            ;* r12   assigned to dummy1$1
+     397            $C$DW$28        .dwtag  DW_TAG_variable, DW_AT_name("dummy1")
+     398                    .dwattr $C$DW$28, DW_AT_TI_symbol_name("dummy1$1")
+     399                    .dwattr $C$DW$28, DW_AT_type(*$C$DW$T$6)
+     400                    .dwattr $C$DW$28, DW_AT_location[DW_OP_reg12]
+     401            ;* r8    assigned to addr1
+     402            $C$DW$29        .dwtag  DW_TAG_variable, DW_AT_name("addr1")
+     403                    .dwattr $C$DW$29, DW_AT_TI_symbol_name("addr1")
+     404                    .dwattr $C$DW$29, DW_AT_type(*$C$DW$T$13)
+     405                    .dwattr $C$DW$29, DW_AT_location[DW_OP_reg8 DW_OP_piece 2 DW_OP_reg9 DW_OP_piece 2]
+     406            ;* r10   assigned to data
+     407            $C$DW$30        .dwtag  DW_TAG_variable, DW_AT_name("data")
+     408                    .dwattr $C$DW$30, DW_AT_TI_symbol_name("data")
+     409                    .dwattr $C$DW$30, DW_AT_type(*$C$DW$T$6)
+     410                    .dwattr $C$DW$30, DW_AT_location[DW_OP_reg10]
+     411 000002 0ECA          MOVA      r14,r10               ; [] |10| 
+     412 000004 0CC8          MOVA      r12,r8                ; [] |10| 
+     413 000006 0DC9          MOVA      r13,r9                ; [] |10| 
+     414                    .dwpsn  file "../Flash.c",line 14,column 2,is_stmt,isa 0
+     415 000008 407C          MOV.B     #5,r12                ; [] |14| 
+         00000a 0005 
+     416            $C$DW$31        .dwtag  DW_TAG_TI_branch
+     417                    .dwattr $C$DW$31, DW_AT_low_pc(0x00)
+     418                    .dwattr $C$DW$31, DW_AT_name("flash_m25p80_pwr_up")
+     419                    .dwattr $C$DW$31, DW_AT_TI_call
+     420 00000c 13B0!         CALLA     #flash_m25p80_pwr_up  ; [] |14| 
+         00000e 0000 
+     421                                                      ; [] |14| 
+     422                    .dwpsn  file "../Flash.c",line 16,column 2,is_stmt,isa 0
+     423 000010 4882          MOV.W     r8,&addr2$2+0         ; [] |16| 
+         000012 0000!
+     424 000014 4982          MOV.W     r9,&addr2$2+2         ; [] |16| 
+         000016 0002!
+     425                    .dwpsn  file "../Flash.c",line 18,column 2,is_stmt,isa 0
+     426 000018 407C          MOV.B     #6,r12                ; [] |18| 
+         00001a 0006 
+     427            $C$DW$32        .dwtag  DW_TAG_TI_branch
+     428                    .dwattr $C$DW$32, DW_AT_low_pc(0x00)
+     429                    .dwattr $C$DW$32, DW_AT_name("flash_m25p80_write_en")
+     430                    .dwattr $C$DW$32, DW_AT_TI_call
+     431 00001c 13B0!         CALLA     #flash_m25p80_write_en ; [] |18| 
+         00001e 0000 
+     432                                                      ; [] |18| 
+     433                    .dwpsn  file "../Flash.c",line 20,column 2,is_stmt,isa 0
+     434 000020 008C!         MOVX.A    #write+0,r12          ; [] |20| 
+MSP430 Assembler PC v4.4.3 Sat Aug 08 16:59:34 2015
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+Flash.asm                                                            PAGE    9
+
+         000022 0000 
+     435            $C$DW$33        .dwtag  DW_TAG_TI_branch
+     436                    .dwattr $C$DW$33, DW_AT_low_pc(0x00)
+     437                    .dwattr $C$DW$33, DW_AT_name("print_string")
+     438                    .dwattr $C$DW$33, DW_AT_TI_call
+     439 000024 13B0!         CALLA     #print_string         ; [] |20| 
+         000026 0000 
+     440                                                      ; [] |20| 
+     441                    .dwpsn  file "../Flash.c",line 22,column 2,is_stmt,isa 0
+     442 000028 C2F2          BIC.B     #8,&P3OUT+0           ; [] |22| 
+         00002a 0000!
+     443                    .dwpsn  file "../Flash.c",line 24,column 2,is_stmt,isa 0
+     444 00002c 436C          MOV.B     #2,r12                ; [] |24| 
+     445            $C$DW$34        .dwtag  DW_TAG_TI_branch
+     446                    .dwattr $C$DW$34, DW_AT_low_pc(0x00)
+     447                    .dwattr $C$DW$34, DW_AT_name("flash_m25p80_spi_cmd_write")
+     448                    .dwattr $C$DW$34, DW_AT_TI_call
+     449 00002e 13B0!         CALLA     #flash_m25p80_spi_cmd_write ; [] |24| 
+         000030 0000 
+     450                                                      ; [] |24| 
+     451                    .dwpsn  file "../Flash.c",line 25,column 2,is_stmt,isa 0
+     452 000032 425C          MOV.B     &addr2$2+2,r12        ; [] |25| 
+         000034 0002!
+     453            $C$DW$35        .dwtag  DW_TAG_TI_branch
+     454                    .dwattr $C$DW$35, DW_AT_low_pc(0x00)
+     455                    .dwattr $C$DW$35, DW_AT_name("flash_m25p80_spi_cmd_write")
+     456                    .dwattr $C$DW$35, DW_AT_TI_call
+     457 000036 13B0!         CALLA     #flash_m25p80_spi_cmd_write ; [] |25| 
+         000038 0000 
+     458                                                      ; [] |25| 
+     459                    .dwpsn  file "../Flash.c",line 26,column 2,is_stmt,isa 0
+     460 00003a 425C          MOV.B     &addr2$2+1,r12        ; [] |26| 
+         00003c 0001!
+     461            $C$DW$36        .dwtag  DW_TAG_TI_branch
+     462                    .dwattr $C$DW$36, DW_AT_low_pc(0x00)
+     463                    .dwattr $C$DW$36, DW_AT_name("flash_m25p80_spi_cmd_write")
+     464                    .dwattr $C$DW$36, DW_AT_TI_call
+     465 00003e 13B0!         CALLA     #flash_m25p80_spi_cmd_write ; [] |26| 
+         000040 0000 
+     466                                                      ; [] |26| 
+     467                    .dwpsn  file "../Flash.c",line 27,column 2,is_stmt,isa 0
+     468 000042 425C          MOV.B     &addr2$2+0,r12        ; [] |27| 
+         000044 0000!
+     469            $C$DW$37        .dwtag  DW_TAG_TI_branch
+     470                    .dwattr $C$DW$37, DW_AT_low_pc(0x00)
+     471                    .dwattr $C$DW$37, DW_AT_name("flash_m25p80_spi_cmd_write")
+     472                    .dwattr $C$DW$37, DW_AT_TI_call
+     473 000046 13B0!         CALLA     #flash_m25p80_spi_cmd_write ; [] |27| 
+         000048 0000 
+     474                                                      ; [] |27| 
+     475                    .dwpsn  file "../Flash.c",line 29,column 2,is_stmt,isa 0
+     476 00004a 4AC2          MOV.B     r10,&UCA0TXBUF+0      ; [] |29| 
+         00004c 0000!
+     477                    .dwpsn  file "../Flash.c",line 30,column 2,is_stmt,isa 0
+     478            $C$DW$38        .dwtag  DW_TAG_TI_branch
+MSP430 Assembler PC v4.4.3 Sat Aug 08 16:59:34 2015
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+Flash.asm                                                            PAGE   10
+
+     479                    .dwattr $C$DW$38, DW_AT_low_pc(0x00)
+     480                    .dwattr $C$DW$38, DW_AT_name("delay_500_ms")
+     481                    .dwattr $C$DW$38, DW_AT_TI_call
+     482 00004e 13B0!         CALLA     #delay_500_ms         ; [] |30| 
+         000050 0000 
+     483                                                      ; [] |30| 
+     484                    .dwpsn  file "../Flash.c",line 31,column 2,is_stmt,isa 0
+     485 000052 425C          MOV.B     &UCA0RXBUF+0,r12      ; [] |31| 
+         000054 0000!
+     486                    .dwpsn  file "../Flash.c",line 33,column 2,is_stmt,isa 0
+     487                    .dwpsn  file "../Flash.c",line 35,column 1,is_stmt,isa 0
+     488 000056 1628          POPM.A    #3,r10                ; [] 
+     489                    .dwcfi  restore_reg, 8
+     490                    .dwcfi  restore_reg, 9
+     491                    .dwcfi  restore_reg, 10
+     492                    .dwcfi  cfa_offset, 4
+     493            $C$DW$39        .dwtag  DW_TAG_TI_branch
+     494                    .dwattr $C$DW$39, DW_AT_low_pc(0x00)
+     495                    .dwattr $C$DW$39, DW_AT_TI_return
+     496 000058 0110          RETA      ; [] 
+     497                    ; [] 
+     498                    .dwattr $C$DW$23, DW_AT_TI_end_file("../Flash.c")
+     499                    .dwattr $C$DW$23, DW_AT_TI_end_line(0x23)
+     500                    .dwattr $C$DW$23, DW_AT_TI_end_column(0x01)
+     501                    .dwendentry
+     502                    .dwendtag $C$DW$23
+     503            
+     504 000000               .sect   ".text:clk_init"
+     505                    .clink
+     506                    .global clk_init
+     507            
+     508            $C$DW$40        .dwtag  DW_TAG_subprogram, DW_AT_name("clk_init")
+     509                    .dwattr $C$DW$40, DW_AT_low_pc(clk_init)
+     510                    .dwattr $C$DW$40, DW_AT_high_pc(0x00)
+     511                    .dwattr $C$DW$40, DW_AT_TI_symbol_name("clk_init")
+     512                    .dwattr $C$DW$40, DW_AT_external
+     513                    .dwattr $C$DW$40, DW_AT_TI_begin_file("../Flash.c")
+     514                    .dwattr $C$DW$40, DW_AT_TI_begin_line(0x25)
+     515                    .dwattr $C$DW$40, DW_AT_TI_begin_column(0x06)
+     516                    .dwattr $C$DW$40, DW_AT_decl_file("../Flash.c")
+     517                    .dwattr $C$DW$40, DW_AT_decl_line(0x25)
+     518                    .dwattr $C$DW$40, DW_AT_decl_column(0x06)
+     519                    .dwattr $C$DW$40, DW_AT_TI_max_frame_size(0x04)
+     520                    .dwpsn  file "../Flash.c",line 38,column 1,is_stmt,address clk_init,isa 0
+     521            
+     522                    .dwfde $C$DW$CIE, clk_init
+     523            
+     524            ;*****************************************************************************
+     525            ;* FUNCTION NAME: clk_init                                                   *
+     526            ;*                                                                           *
+     527            ;*   Regs Modified     : SP                                                  *
+     528            ;*   Regs Used         : SP                                                  *
+     529            ;*   Local Frame Size  : 0 Args + 0 Auto + 0 Save = 0 byte                   *
+     530            ;*****************************************************************************
+     531 000000       clk_init:
+MSP430 Assembler PC v4.4.3 Sat Aug 08 16:59:34 2015
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+Flash.asm                                                            PAGE   11
+
+     532            ;* --------------------------------------------------------------------------*
+     533                    .dwcfi  cfa_offset, 4
+     534                    .dwcfi  save_reg_to_mem, 16, -4
+     535                    .dwpsn  file "../Flash.c",line 46,column 1,is_stmt,isa 0
+     536            $C$DW$41        .dwtag  DW_TAG_TI_branch
+     537                    .dwattr $C$DW$41, DW_AT_low_pc(0x00)
+     538                    .dwattr $C$DW$41, DW_AT_TI_return
+     539 000000 0110          RETA      ; [] 
+     540                    ; [] 
+     541                    .dwattr $C$DW$40, DW_AT_TI_end_file("../Flash.c")
+     542                    .dwattr $C$DW$40, DW_AT_TI_end_line(0x2e)
+     543                    .dwattr $C$DW$40, DW_AT_TI_end_column(0x01)
+     544                    .dwendentry
+     545                    .dwendtag $C$DW$40
+     546            
+     547 000000               .sect   ".text:flash_interface_init"
+     548                    .clink
+     549                    .global flash_interface_init
+     550            
+     551            $C$DW$42        .dwtag  DW_TAG_subprogram, DW_AT_name("flash_interface_init")
+     552                    .dwattr $C$DW$42, DW_AT_low_pc(flash_interface_init)
+     553                    .dwattr $C$DW$42, DW_AT_high_pc(0x00)
+     554                    .dwattr $C$DW$42, DW_AT_TI_symbol_name("flash_interface_init")
+     555                    .dwattr $C$DW$42, DW_AT_external
+     556                    .dwattr $C$DW$42, DW_AT_TI_begin_file("../Flash.c")
+     557                    .dwattr $C$DW$42, DW_AT_TI_begin_line(0x30)
+     558                    .dwattr $C$DW$42, DW_AT_TI_begin_column(0x06)
+     559                    .dwattr $C$DW$42, DW_AT_decl_file("../Flash.c")
+     560                    .dwattr $C$DW$42, DW_AT_decl_line(0x30)
+     561                    .dwattr $C$DW$42, DW_AT_decl_column(0x06)
+     562                    .dwattr $C$DW$42, DW_AT_TI_max_frame_size(0x04)
+     563                    .dwpsn  file "../Flash.c",line 49,column 1,is_stmt,address flash_interface_init,isa 0
+     564            
+     565                    .dwfde $C$DW$CIE, flash_interface_init
+     566            
+     567            ;*****************************************************************************
+     568            ;* FUNCTION NAME: flash_interface_init                                       *
+     569            ;*                                                                           *
+     570            ;*   Regs Modified     : SP,SR                                               *
+     571            ;*   Regs Used         : SP,SR                                               *
+     572            ;*   Local Frame Size  : 0 Args + 0 Auto + 0 Save = 0 byte                   *
+     573            ;*****************************************************************************
+     574 000000       flash_interface_init:
+     575            ;* --------------------------------------------------------------------------*
+     576                    .dwcfi  cfa_offset, 4
+     577                    .dwcfi  save_reg_to_mem, 16, -4
+     578                    .dwpsn  file "../Flash.c",line 51,column 2,is_stmt,isa 0
+     579 000000 F0F2          AND.B     #249,&P3OUT+0         ; [] |51| 
+         000002 00F9 
+         000004 0000!
+     580                    .dwpsn  file "../Flash.c",line 52,column 2,is_stmt,isa 0
+     581 000006 D0F2          OR.B      #49,&P3SEL+0          ; [] |52| 
+         000008 0031 
+         00000a 0000!
+     582                    .dwpsn  file "../Flash.c",line 53,column 2,is_stmt,isa 0
+MSP430 Assembler PC v4.4.3 Sat Aug 08 16:59:34 2015
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+Flash.asm                                                            PAGE   12
+
+     583 00000c D0F2          OR.B      #17,&P3DIR+0          ; [] |53| 
+         00000e 0011 
+         000010 0000!
+     584                    .dwpsn  file "../Flash.c",line 55,column 2,is_stmt,isa 0
+     585 000012 F0F2          AND.B     #223,&P3DIR+0         ; [] |55| 
+         000014 00DF 
+         000016 0000!
+     586                    .dwpsn  file "../Flash.c",line 56,column 2,is_stmt,isa 0
+     587 000018 D2F2          OR.B      #8,&P3DIR+0           ; [] |56| 
+         00001a 0000!
+     588                    .dwpsn  file "../Flash.c",line 58,column 2,is_stmt,isa 0
+     589 00001c D3D2          OR.B      #1,&UCA0CTL1+0        ; [] |58| 
+         00001e 0000!
+     590                    .dwpsn  file "../Flash.c",line 59,column 2,is_stmt,isa 0
+     591 000020 D0F2          OR.B      #233,&UCA0CTL0+0      ; [] |59| 
+         000022 00E9 
+         000024 0000!
+     592                    .dwpsn  file "../Flash.c",line 61,column 2,is_stmt,isa 0
+     593 000026 D0F2          OR.B      #128,&UCA0CTL1+0      ; [] |61| 
+         000028 0080 
+         00002a 0000!
+     594                    .dwpsn  file "../Flash.c",line 63,column 2,is_stmt,isa 0
+     595 00002c 43C2          MOV.B     #0,&DCOCTL+0          ; [] |63| 
+         00002e 0000!
+     596                    .dwpsn  file "../Flash.c",line 64,column 2,is_stmt,isa 0
+     597 000030 40F2          MOV.B     #141,&BCSCTL1+0       ; [] |64| 
+         000032 008D 
+         000034 0000!
+     598                    .dwpsn  file "../Flash.c",line 65,column 2,is_stmt,isa 0
+     599 000036 40F2          MOV.B     #136,&DCOCTL+0        ; [] |65| 
+         000038 0088 
+         00003a 0000!
+     600                    .dwpsn  file "../Flash.c",line 67,column 2,is_stmt,isa 0
+     601 00003c 43D2          MOV.B     #1,&UCA0BR0+0         ; [] |67| 
+         00003e 0000!
+     602                    .dwpsn  file "../Flash.c",line 68,column 2,is_stmt,isa 0
+     603 000040 43C2          MOV.B     #0,&UCA0BR1+0         ; [] |68| 
+         000042 0000!
+     604                    .dwpsn  file "../Flash.c",line 69,column 2,is_stmt,isa 0
+     605 000044 43E2          MOV.B     #2,&UCA0MCTL+0        ; [] |69| 
+         000046 0000!
+     606                    .dwpsn  file "../Flash.c",line 70,column 2,is_stmt,isa 0
+     607 000048 C3D2          BIC.B     #1,&UCA0CTL1+0        ; [] |70| 
+         00004a 0000!
+     608                    .dwpsn  file "../Flash.c",line 72,column 2,is_stmt,isa 0
+     609 00004c D3D2          OR.B      #1,&IE2+0             ; [] |72| 
+         00004e 0000!
+     610                    .dwpsn  file "../Flash.c",line 76,column 1,is_stmt,isa 0
+     611            $C$DW$43        .dwtag  DW_TAG_TI_branch
+     612                    .dwattr $C$DW$43, DW_AT_low_pc(0x00)
+     613                    .dwattr $C$DW$43, DW_AT_TI_return
+     614 000050 0110          RETA      ; [] 
+     615                    ; [] 
+     616                    .dwattr $C$DW$42, DW_AT_TI_end_file("../Flash.c")
+     617                    .dwattr $C$DW$42, DW_AT_TI_end_line(0x4c)
+MSP430 Assembler PC v4.4.3 Sat Aug 08 16:59:34 2015
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+Flash.asm                                                            PAGE   13
+
+     618                    .dwattr $C$DW$42, DW_AT_TI_end_column(0x01)
+     619                    .dwendentry
+     620                    .dwendtag $C$DW$42
+     621            
+     622 000000               .sect   ".text:flash_m25p80_pwr_up"
+     623                    .clink
+     624                    .global flash_m25p80_pwr_up
+     625            
+     626            $C$DW$44        .dwtag  DW_TAG_subprogram, DW_AT_name("flash_m25p80_pwr_up")
+     627                    .dwattr $C$DW$44, DW_AT_low_pc(flash_m25p80_pwr_up)
+     628                    .dwattr $C$DW$44, DW_AT_high_pc(0x00)
+     629                    .dwattr $C$DW$44, DW_AT_TI_symbol_name("flash_m25p80_pwr_up")
+     630                    .dwattr $C$DW$44, DW_AT_external
+     631                    .dwattr $C$DW$44, DW_AT_TI_begin_file("../Flash.c")
+     632                    .dwattr $C$DW$44, DW_AT_TI_begin_line(0x4e)
+     633                    .dwattr $C$DW$44, DW_AT_TI_begin_column(0x06)
+     634                    .dwattr $C$DW$44, DW_AT_decl_file("../Flash.c")
+     635                    .dwattr $C$DW$44, DW_AT_decl_line(0x4e)
+     636                    .dwattr $C$DW$44, DW_AT_decl_column(0x06)
+     637                    .dwattr $C$DW$44, DW_AT_TI_max_frame_size(0x08)
+     638                    .dwpsn  file "../Flash.c",line 79,column 1,is_stmt,address flash_m25p80_pwr_up,isa 0
+     639            
+     640                    .dwfde $C$DW$CIE, flash_m25p80_pwr_up
+     641            $C$DW$45        .dwtag  DW_TAG_formal_parameter, DW_AT_name("cmd")
+     642                    .dwattr $C$DW$45, DW_AT_TI_symbol_name("cmd")
+     643                    .dwattr $C$DW$45, DW_AT_type(*$C$DW$T$6)
+     644                    .dwattr $C$DW$45, DW_AT_location[DW_OP_reg12]
+     645            
+     646            ;*****************************************************************************
+     647            ;* FUNCTION NAME: flash_m25p80_pwr_up                                        *
+     648            ;*                                                                           *
+     649            ;*   Regs Modified     : SP,SR,r10,r11,r12,r13,r14,r15                       *
+     650            ;*   Regs Used         : SP,SR,r10,r11,r12,r13,r14,r15                       *
+     651            ;*   Local Frame Size  : 0 Args + 0 Auto + 4 Save = 4 byte                   *
+     652            ;*****************************************************************************
+     653 000000       flash_m25p80_pwr_up:
+     654            ;* --------------------------------------------------------------------------*
+     655                    .dwcfi  cfa_offset, 4
+     656                    .dwcfi  save_reg_to_mem, 16, -4
+     657 000000 140A          PUSHM.A   #1,r10                ; [] 
+     658                    .dwcfi  save_reg_to_mem, 10, -8
+     659                    .dwcfi  cfa_offset, 8
+     660            ;* r10   assigned to cmd
+     661            $C$DW$46        .dwtag  DW_TAG_variable, DW_AT_name("cmd")
+     662                    .dwattr $C$DW$46, DW_AT_TI_symbol_name("cmd")
+     663                    .dwattr $C$DW$46, DW_AT_type(*$C$DW$T$6)
+     664                    .dwattr $C$DW$46, DW_AT_location[DW_OP_reg10]
+     665 000002 0CCA          MOVA      r12,r10               ; [] |79| 
+     666                    .dwpsn  file "../Flash.c",line 81,column 2,is_stmt,isa 0
+     667 000004 C2F2          BIC.B     #8,&P3OUT+0           ; [] |81| 
+         000006 0000!
+     668                    .dwpsn  file "../Flash.c",line 82,column 2,is_stmt,isa 0
+     669            $C$DW$47        .dwtag  DW_TAG_TI_branch
+     670                    .dwattr $C$DW$47, DW_AT_low_pc(0x00)
+     671                    .dwattr $C$DW$47, DW_AT_name("delay_500_ms")
+MSP430 Assembler PC v4.4.3 Sat Aug 08 16:59:34 2015
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+Flash.asm                                                            PAGE   14
+
+     672                    .dwattr $C$DW$47, DW_AT_TI_call
+     673 000008 13B0!         CALLA     #delay_500_ms         ; [] |82| 
+         00000a 0000 
+     674                                                      ; [] |82| 
+     675                    .dwpsn  file "../Flash.c",line 83,column 2,is_stmt,isa 0
+     676 00000c 0ACC          MOVA      r10,r12               ; [] |83| 
+     677            $C$DW$48        .dwtag  DW_TAG_TI_branch
+     678                    .dwattr $C$DW$48, DW_AT_low_pc(0x00)
+     679                    .dwattr $C$DW$48, DW_AT_name("flash_m25p80_spi_cmd_write")
+     680                    .dwattr $C$DW$48, DW_AT_TI_call
+     681 00000e 13B0!         CALLA     #flash_m25p80_spi_cmd_write ; [] |83| 
+         000010 0000 
+     682                                                      ; [] |83| 
+     683                    .dwpsn  file "../Flash.c",line 84,column 2,is_stmt,isa 0
+     684            $C$DW$49        .dwtag  DW_TAG_TI_branch
+     685                    .dwattr $C$DW$49, DW_AT_low_pc(0x00)
+     686                    .dwattr $C$DW$49, DW_AT_name("delay_500_ms")
+     687                    .dwattr $C$DW$49, DW_AT_TI_call
+     688 000012 13B0!         CALLA     #delay_500_ms         ; [] |84| 
+         000014 0000 
+     689                                                      ; [] |84| 
+     690                    .dwpsn  file "../Flash.c",line 85,column 2,is_stmt,isa 0
+     691 000016 D2F2          OR.B      #8,&P3OUT+0           ; [] |85| 
+         000018 0000!
+     692                    .dwpsn  file "../Flash.c",line 87,column 1,is_stmt,isa 0
+     693 00001a 160A          POPM.A    #1,r10                ; [] 
+     694                    .dwcfi  restore_reg, 10
+     695                    .dwcfi  cfa_offset, 4
+     696            $C$DW$50        .dwtag  DW_TAG_TI_branch
+     697                    .dwattr $C$DW$50, DW_AT_low_pc(0x00)
+     698                    .dwattr $C$DW$50, DW_AT_TI_return
+     699 00001c 0110          RETA      ; [] 
+     700                    ; [] 
+     701                    .dwattr $C$DW$44, DW_AT_TI_end_file("../Flash.c")
+     702                    .dwattr $C$DW$44, DW_AT_TI_end_line(0x57)
+     703                    .dwattr $C$DW$44, DW_AT_TI_end_column(0x01)
+     704                    .dwendentry
+     705                    .dwendtag $C$DW$44
+     706            
+     707 000000               .sect   ".text:flash_m25p80_spi_cmd_write"
+     708                    .clink
+     709                    .global flash_m25p80_spi_cmd_write
+     710            
+     711            $C$DW$51        .dwtag  DW_TAG_subprogram, DW_AT_name("flash_m25p80_spi_cmd_write")
+     712                    .dwattr $C$DW$51, DW_AT_low_pc(flash_m25p80_spi_cmd_write)
+     713                    .dwattr $C$DW$51, DW_AT_high_pc(0x00)
+     714                    .dwattr $C$DW$51, DW_AT_TI_symbol_name("flash_m25p80_spi_cmd_write")
+     715                    .dwattr $C$DW$51, DW_AT_external
+     716                    .dwattr $C$DW$51, DW_AT_type(*$C$DW$T$6)
+     717                    .dwattr $C$DW$51, DW_AT_TI_begin_file("../Flash.c")
+     718                    .dwattr $C$DW$51, DW_AT_TI_begin_line(0x59)
+     719                    .dwattr $C$DW$51, DW_AT_TI_begin_column(0x0f)
+     720                    .dwattr $C$DW$51, DW_AT_decl_file("../Flash.c")
+     721                    .dwattr $C$DW$51, DW_AT_decl_line(0x59)
+     722                    .dwattr $C$DW$51, DW_AT_decl_column(0x0f)
+MSP430 Assembler PC v4.4.3 Sat Aug 08 16:59:34 2015
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+Flash.asm                                                            PAGE   15
+
+     723                    .dwattr $C$DW$51, DW_AT_TI_max_frame_size(0x04)
+     724                    .dwpsn  file "../Flash.c",line 90,column 1,is_stmt,address flash_m25p80_spi_cmd_write,isa 0
+     725            
+     726                    .dwfde $C$DW$CIE, flash_m25p80_spi_cmd_write
+     727            $C$DW$52        .dwtag  DW_TAG_formal_parameter, DW_AT_name("cmd")
+     728                    .dwattr $C$DW$52, DW_AT_TI_symbol_name("cmd")
+     729                    .dwattr $C$DW$52, DW_AT_type(*$C$DW$T$6)
+     730                    .dwattr $C$DW$52, DW_AT_location[DW_OP_reg12]
+     731            
+     732            ;*****************************************************************************
+     733            ;* FUNCTION NAME: flash_m25p80_spi_cmd_write                                 *
+     734            ;*                                                                           *
+     735            ;*   Regs Modified     : SP,SR,r11,r12,r13,r14,r15                           *
+     736            ;*   Regs Used         : SP,SR,r11,r12,r13,r14,r15                           *
+     737            ;*   Local Frame Size  : 0 Args + 0 Auto + 0 Save = 0 byte                   *
+     738            ;*****************************************************************************
+     739 000000       flash_m25p80_spi_cmd_write:
+     740            ;* --------------------------------------------------------------------------*
+     741                    .dwcfi  cfa_offset, 4
+     742                    .dwcfi  save_reg_to_mem, 16, -4
+     743            ;* r12   assigned to cmd
+     744            $C$DW$53        .dwtag  DW_TAG_variable, DW_AT_name("cmd")
+     745                    .dwattr $C$DW$53, DW_AT_TI_symbol_name("cmd")
+     746                    .dwattr $C$DW$53, DW_AT_type(*$C$DW$T$6)
+     747                    .dwattr $C$DW$53, DW_AT_location[DW_OP_reg12]
+     748            ;* r12   assigned to dummy
+     749            $C$DW$54        .dwtag  DW_TAG_variable, DW_AT_name("dummy")
+     750                    .dwattr $C$DW$54, DW_AT_TI_symbol_name("dummy")
+     751                    .dwattr $C$DW$54, DW_AT_type(*$C$DW$T$6)
+     752                    .dwattr $C$DW$54, DW_AT_location[DW_OP_reg12]
+     753                    .dwpsn  file "../Flash.c",line 92,column 2,is_stmt,isa 0
+     754 000000 C2F2          BIC.B     #8,&P3OUT+0           ; [] |92| 
+         000002 0000!
+     755                    .dwpsn  file "../Flash.c",line 93,column 2,is_stmt,isa 0
+     756 000004 4CC2          MOV.B     r12,&UCA0TXBUF+0      ; [] |93| 
+         000006 0000!
+     757                    .dwpsn  file "../Flash.c",line 94,column 2,is_stmt,isa 0
+     758            $C$DW$55        .dwtag  DW_TAG_TI_branch
+     759                    .dwattr $C$DW$55, DW_AT_low_pc(0x00)
+     760                    .dwattr $C$DW$55, DW_AT_name("delay_500_ms")
+     761                    .dwattr $C$DW$55, DW_AT_TI_call
+     762 000008 13B0!         CALLA     #delay_500_ms         ; [] |94| 
+         00000a 0000 
+     763                                                      ; [] |94| 
+     764                    .dwpsn  file "../Flash.c",line 99,column 2,is_stmt,isa 0
+     765 00000c 425C          MOV.B     &UCA0RXBUF+0,r12      ; [] |99| 
+         00000e 0000!
+     766                    .dwpsn  file "../Flash.c",line 100,column 2,is_stmt,isa 0
+     767 000010 D2F2          OR.B      #8,&P3OUT+0           ; [] |100| 
+         000012 0000!
+     768                    .dwpsn  file "../Flash.c",line 101,column 2,is_stmt,isa 0
+     769                    .dwpsn  file "../Flash.c",line 102,column 1,is_stmt,isa 0
+     770            $C$DW$56        .dwtag  DW_TAG_TI_branch
+     771                    .dwattr $C$DW$56, DW_AT_low_pc(0x00)
+     772                    .dwattr $C$DW$56, DW_AT_TI_return
+MSP430 Assembler PC v4.4.3 Sat Aug 08 16:59:34 2015
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+Flash.asm                                                            PAGE   16
+
+     773 000014 0110          RETA      ; [] 
+     774                    ; [] 
+     775                    .dwattr $C$DW$51, DW_AT_TI_end_file("../Flash.c")
+     776                    .dwattr $C$DW$51, DW_AT_TI_end_line(0x66)
+     777                    .dwattr $C$DW$51, DW_AT_TI_end_column(0x01)
+     778                    .dwendentry
+     779                    .dwendtag $C$DW$51
+     780            
+     781 000000               .sect   ".text:flash_m25p80_write_en"
+     782                    .clink
+     783                    .global flash_m25p80_write_en
+     784            
+     785            $C$DW$57        .dwtag  DW_TAG_subprogram, DW_AT_name("flash_m25p80_write_en")
+     786                    .dwattr $C$DW$57, DW_AT_low_pc(flash_m25p80_write_en)
+     787                    .dwattr $C$DW$57, DW_AT_high_pc(0x00)
+     788                    .dwattr $C$DW$57, DW_AT_TI_symbol_name("flash_m25p80_write_en")
+     789                    .dwattr $C$DW$57, DW_AT_external
+     790                    .dwattr $C$DW$57, DW_AT_TI_begin_file("../Flash.c")
+     791                    .dwattr $C$DW$57, DW_AT_TI_begin_line(0x68)
+     792                    .dwattr $C$DW$57, DW_AT_TI_begin_column(0x06)
+     793                    .dwattr $C$DW$57, DW_AT_decl_file("../Flash.c")
+     794                    .dwattr $C$DW$57, DW_AT_decl_line(0x68)
+     795                    .dwattr $C$DW$57, DW_AT_decl_column(0x06)
+     796                    .dwattr $C$DW$57, DW_AT_TI_max_frame_size(0x08)
+     797                    .dwpsn  file "../Flash.c",line 105,column 1,is_stmt,address flash_m25p80_write_en,isa 0
+     798            
+     799                    .dwfde $C$DW$CIE, flash_m25p80_write_en
+     800            $C$DW$58        .dwtag  DW_TAG_formal_parameter, DW_AT_name("cmd")
+     801                    .dwattr $C$DW$58, DW_AT_TI_symbol_name("cmd")
+     802                    .dwattr $C$DW$58, DW_AT_type(*$C$DW$T$6)
+     803                    .dwattr $C$DW$58, DW_AT_location[DW_OP_reg12]
+     804            
+     805            ;*****************************************************************************
+     806            ;* FUNCTION NAME: flash_m25p80_write_en                                      *
+     807            ;*                                                                           *
+     808            ;*   Regs Modified     : SP,SR,r10,r11,r12,r13,r14,r15                       *
+     809            ;*   Regs Used         : SP,SR,r10,r11,r12,r13,r14,r15                       *
+     810            ;*   Local Frame Size  : 0 Args + 0 Auto + 4 Save = 4 byte                   *
+     811            ;*****************************************************************************
+     812 000000       flash_m25p80_write_en:
+     813            ;* --------------------------------------------------------------------------*
+     814                    .dwcfi  cfa_offset, 4
+     815                    .dwcfi  save_reg_to_mem, 16, -4
+     816 000000 140A          PUSHM.A   #1,r10                ; [] 
+     817                    .dwcfi  save_reg_to_mem, 10, -8
+     818                    .dwcfi  cfa_offset, 8
+     819            ;* r10   assigned to cmd
+     820            $C$DW$59        .dwtag  DW_TAG_variable, DW_AT_name("cmd")
+     821                    .dwattr $C$DW$59, DW_AT_TI_symbol_name("cmd")
+     822                    .dwattr $C$DW$59, DW_AT_type(*$C$DW$T$6)
+     823                    .dwattr $C$DW$59, DW_AT_location[DW_OP_reg10]
+     824 000002 0CCA          MOVA      r12,r10               ; [] |105| 
+     825                    .dwpsn  file "../Flash.c",line 106,column 2,is_stmt,isa 0
+     826 000004 C2F2          BIC.B     #8,&P3OUT+0           ; [] |106| 
+         000006 0000!
+MSP430 Assembler PC v4.4.3 Sat Aug 08 16:59:34 2015
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+Flash.asm                                                            PAGE   17
+
+     827                    .dwpsn  file "../Flash.c",line 107,column 2,is_stmt,isa 0
+     828            $C$DW$60        .dwtag  DW_TAG_TI_branch
+     829                    .dwattr $C$DW$60, DW_AT_low_pc(0x00)
+     830                    .dwattr $C$DW$60, DW_AT_name("delay_500_ms")
+     831                    .dwattr $C$DW$60, DW_AT_TI_call
+     832 000008 13B0!         CALLA     #delay_500_ms         ; [] |107| 
+         00000a 0000 
+     833                                                      ; [] |107| 
+     834                    .dwpsn  file "../Flash.c",line 108,column 2,is_stmt,isa 0
+     835 00000c 0ACC          MOVA      r10,r12               ; [] |108| 
+     836            $C$DW$61        .dwtag  DW_TAG_TI_branch
+     837                    .dwattr $C$DW$61, DW_AT_low_pc(0x00)
+     838                    .dwattr $C$DW$61, DW_AT_name("flash_m25p80_spi_cmd_write")
+     839                    .dwattr $C$DW$61, DW_AT_TI_call
+     840 00000e 13B0!         CALLA     #flash_m25p80_spi_cmd_write ; [] |108| 
+         000010 0000 
+     841                                                      ; [] |108| 
+     842                    .dwpsn  file "../Flash.c",line 109,column 2,is_stmt,isa 0
+     843            $C$DW$62        .dwtag  DW_TAG_TI_branch
+     844                    .dwattr $C$DW$62, DW_AT_low_pc(0x00)
+     845                    .dwattr $C$DW$62, DW_AT_name("delay_500_ms")
+     846                    .dwattr $C$DW$62, DW_AT_TI_call
+     847 000012 13B0!         CALLA     #delay_500_ms         ; [] |109| 
+         000014 0000 
+     848                                                      ; [] |109| 
+     849                    .dwpsn  file "../Flash.c",line 110,column 2,is_stmt,isa 0
+     850 000016 D2F2          OR.B      #8,&P3OUT+0           ; [] |110| 
+         000018 0000!
+     851                    .dwpsn  file "../Flash.c",line 111,column 1,is_stmt,isa 0
+     852 00001a 160A          POPM.A    #1,r10                ; [] 
+     853                    .dwcfi  restore_reg, 10
+     854                    .dwcfi  cfa_offset, 4
+     855            $C$DW$63        .dwtag  DW_TAG_TI_branch
+     856                    .dwattr $C$DW$63, DW_AT_low_pc(0x00)
+     857                    .dwattr $C$DW$63, DW_AT_TI_return
+     858 00001c 0110          RETA      ; [] 
+     859                    ; [] 
+     860                    .dwattr $C$DW$57, DW_AT_TI_end_file("../Flash.c")
+     861                    .dwattr $C$DW$57, DW_AT_TI_end_line(0x6f)
+     862                    .dwattr $C$DW$57, DW_AT_TI_end_column(0x01)
+     863                    .dwendentry
+     864                    .dwendtag $C$DW$57
+     865            
+     866 000000               .sect   ".text:flash_m25p80_write_dis"
+     867                    .clink
+     868                    .global flash_m25p80_write_dis
+     869            
+     870            $C$DW$64        .dwtag  DW_TAG_subprogram, DW_AT_name("flash_m25p80_write_dis")
+     871                    .dwattr $C$DW$64, DW_AT_low_pc(flash_m25p80_write_dis)
+     872                    .dwattr $C$DW$64, DW_AT_high_pc(0x00)
+     873                    .dwattr $C$DW$64, DW_AT_TI_symbol_name("flash_m25p80_write_dis")
+     874                    .dwattr $C$DW$64, DW_AT_external
+     875                    .dwattr $C$DW$64, DW_AT_TI_begin_file("../Flash.c")
+     876                    .dwattr $C$DW$64, DW_AT_TI_begin_line(0x71)
+     877                    .dwattr $C$DW$64, DW_AT_TI_begin_column(0x06)
+MSP430 Assembler PC v4.4.3 Sat Aug 08 16:59:34 2015
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+Flash.asm                                                            PAGE   18
+
+     878                    .dwattr $C$DW$64, DW_AT_decl_file("../Flash.c")
+     879                    .dwattr $C$DW$64, DW_AT_decl_line(0x71)
+     880                    .dwattr $C$DW$64, DW_AT_decl_column(0x06)
+     881                    .dwattr $C$DW$64, DW_AT_TI_max_frame_size(0x08)
+     882                    .dwpsn  file "../Flash.c",line 114,column 1,is_stmt,address flash_m25p80_write_dis,isa 0
+     883            
+     884                    .dwfde $C$DW$CIE, flash_m25p80_write_dis
+     885            $C$DW$65        .dwtag  DW_TAG_formal_parameter, DW_AT_name("cmd")
+     886                    .dwattr $C$DW$65, DW_AT_TI_symbol_name("cmd")
+     887                    .dwattr $C$DW$65, DW_AT_type(*$C$DW$T$6)
+     888                    .dwattr $C$DW$65, DW_AT_location[DW_OP_reg12]
+     889            
+     890            ;*****************************************************************************
+     891            ;* FUNCTION NAME: flash_m25p80_write_dis                                     *
+     892            ;*                                                                           *
+     893            ;*   Regs Modified     : SP,SR,r10,r11,r12,r13,r14,r15                       *
+     894            ;*   Regs Used         : SP,SR,r10,r11,r12,r13,r14,r15                       *
+     895            ;*   Local Frame Size  : 0 Args + 0 Auto + 4 Save = 4 byte                   *
+     896            ;*****************************************************************************
+     897 000000       flash_m25p80_write_dis:
+     898            ;* --------------------------------------------------------------------------*
+     899                    .dwcfi  cfa_offset, 4
+     900                    .dwcfi  save_reg_to_mem, 16, -4
+     901 000000 140A          PUSHM.A   #1,r10                ; [] 
+     902                    .dwcfi  save_reg_to_mem, 10, -8
+     903                    .dwcfi  cfa_offset, 8
+     904            ;* r10   assigned to cmd
+     905            $C$DW$66        .dwtag  DW_TAG_variable, DW_AT_name("cmd")
+     906                    .dwattr $C$DW$66, DW_AT_TI_symbol_name("cmd")
+     907                    .dwattr $C$DW$66, DW_AT_type(*$C$DW$T$6)
+     908                    .dwattr $C$DW$66, DW_AT_location[DW_OP_reg10]
+     909 000002 0CCA          MOVA      r12,r10               ; [] |114| 
+     910                    .dwpsn  file "../Flash.c",line 115,column 2,is_stmt,isa 0
+     911 000004 C2F2          BIC.B     #8,&P3OUT+0           ; [] |115| 
+         000006 0000!
+     912                    .dwpsn  file "../Flash.c",line 116,column 2,is_stmt,isa 0
+     913            $C$DW$67        .dwtag  DW_TAG_TI_branch
+     914                    .dwattr $C$DW$67, DW_AT_low_pc(0x00)
+     915                    .dwattr $C$DW$67, DW_AT_name("delay_500_ms")
+     916                    .dwattr $C$DW$67, DW_AT_TI_call
+     917 000008 13B0!         CALLA     #delay_500_ms         ; [] |116| 
+         00000a 0000 
+     918                                                      ; [] |116| 
+     919                    .dwpsn  file "../Flash.c",line 117,column 2,is_stmt,isa 0
+     920 00000c 0ACC          MOVA      r10,r12               ; [] |117| 
+     921            $C$DW$68        .dwtag  DW_TAG_TI_branch
+     922                    .dwattr $C$DW$68, DW_AT_low_pc(0x00)
+     923                    .dwattr $C$DW$68, DW_AT_name("flash_m25p80_spi_cmd_write")
+     924                    .dwattr $C$DW$68, DW_AT_TI_call
+     925 00000e 13B0!         CALLA     #flash_m25p80_spi_cmd_write ; [] |117| 
+         000010 0000 
+     926                                                      ; [] |117| 
+     927                    .dwpsn  file "../Flash.c",line 118,column 2,is_stmt,isa 0
+     928            $C$DW$69        .dwtag  DW_TAG_TI_branch
+     929                    .dwattr $C$DW$69, DW_AT_low_pc(0x00)
+MSP430 Assembler PC v4.4.3 Sat Aug 08 16:59:34 2015
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+Flash.asm                                                            PAGE   19
+
+     930                    .dwattr $C$DW$69, DW_AT_name("delay_500_ms")
+     931                    .dwattr $C$DW$69, DW_AT_TI_call
+     932 000012 13B0!         CALLA     #delay_500_ms         ; [] |118| 
+         000014 0000 
+     933                                                      ; [] |118| 
+     934                    .dwpsn  file "../Flash.c",line 119,column 2,is_stmt,isa 0
+     935 000016 D2F2          OR.B      #8,&P3OUT+0           ; [] |119| 
+         000018 0000!
+     936                    .dwpsn  file "../Flash.c",line 120,column 1,is_stmt,isa 0
+     937 00001a 160A          POPM.A    #1,r10                ; [] 
+     938                    .dwcfi  restore_reg, 10
+     939                    .dwcfi  cfa_offset, 4
+     940            $C$DW$70        .dwtag  DW_TAG_TI_branch
+     941                    .dwattr $C$DW$70, DW_AT_low_pc(0x00)
+     942                    .dwattr $C$DW$70, DW_AT_TI_return
+     943 00001c 0110          RETA      ; [] 
+     944                    ; [] 
+     945                    .dwattr $C$DW$64, DW_AT_TI_end_file("../Flash.c")
+     946                    .dwattr $C$DW$64, DW_AT_TI_end_line(0x78)
+     947                    .dwattr $C$DW$64, DW_AT_TI_end_column(0x01)
+     948                    .dwendentry
+     949                    .dwendtag $C$DW$64
+     950            
+     951 000000               .sect   ".text:flash_m25p80_spi_addr_read"
+     952                    .clink
+     953                    .global flash_m25p80_spi_addr_read
+     954            
+     955            $C$DW$71        .dwtag  DW_TAG_subprogram, DW_AT_name("flash_m25p80_spi_addr_read")
+     956                    .dwattr $C$DW$71, DW_AT_low_pc(flash_m25p80_spi_addr_read)
+     957                    .dwattr $C$DW$71, DW_AT_high_pc(0x00)
+     958                    .dwattr $C$DW$71, DW_AT_TI_symbol_name("flash_m25p80_spi_addr_read")
+     959                    .dwattr $C$DW$71, DW_AT_external
+     960                    .dwattr $C$DW$71, DW_AT_type(*$C$DW$T$6)
+     961                    .dwattr $C$DW$71, DW_AT_TI_begin_file("../Flash.c")
+     962                    .dwattr $C$DW$71, DW_AT_TI_begin_line(0x7a)
+     963                    .dwattr $C$DW$71, DW_AT_TI_begin_column(0x0f)
+     964                    .dwattr $C$DW$71, DW_AT_decl_file("../Flash.c")
+     965                    .dwattr $C$DW$71, DW_AT_decl_line(0x7a)
+     966                    .dwattr $C$DW$71, DW_AT_decl_column(0x0f)
+     967                    .dwattr $C$DW$71, DW_AT_TI_max_frame_size(0x0c)
+     968                    .dwpsn  file "../Flash.c",line 123,column 1,is_stmt,address flash_m25p80_spi_addr_read,isa 0
+     969            
+     970                    .dwfde $C$DW$CIE, flash_m25p80_spi_addr_read
+     971            $C$DW$72        .dwtag  DW_TAG_variable, DW_AT_name("data1")
+     972                    .dwattr $C$DW$72, DW_AT_TI_symbol_name("data1$3")
+     973                    .dwattr $C$DW$72, DW_AT_type(*$C$DW$T$6)
+     974                    .dwattr $C$DW$72, DW_AT_location[DW_OP_addr data1$3]
+     975            $C$DW$73        .dwtag  DW_TAG_formal_parameter, DW_AT_name("addr1")
+     976                    .dwattr $C$DW$73, DW_AT_TI_symbol_name("addr1")
+     977                    .dwattr $C$DW$73, DW_AT_type(*$C$DW$T$13)
+     978                    .dwattr $C$DW$73, DW_AT_location[DW_OP_reg12 DW_OP_piece 2 DW_OP_reg13 DW_OP_piece 2]
+     979            $C$DW$74        .dwtag  DW_TAG_formal_parameter, DW_AT_name("p")
+     980                    .dwattr $C$DW$74, DW_AT_TI_symbol_name("p")
+     981                    .dwattr $C$DW$74, DW_AT_type(*$C$DW$T$33)
+     982                    .dwattr $C$DW$74, DW_AT_location[DW_OP_reg14]
+MSP430 Assembler PC v4.4.3 Sat Aug 08 16:59:34 2015
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+Flash.asm                                                            PAGE   20
+
+     983            
+     984            ;*****************************************************************************
+     985            ;* FUNCTION NAME: flash_m25p80_spi_addr_read                                 *
+     986            ;*                                                                           *
+     987            ;*   Regs Modified     : SP,SR,r9,r10,r11,r12,r13,r14,r15                    *
+     988            ;*   Regs Used         : SP,SR,r9,r10,r11,r12,r13,r14,r15                    *
+     989            ;*   Local Frame Size  : 0 Args + 0 Auto + 8 Save = 8 byte                   *
+     990            ;*****************************************************************************
+     991 000000       flash_m25p80_spi_addr_read:
+     992            ;* --------------------------------------------------------------------------*
+     993                    .dwcfi  cfa_offset, 4
+     994                    .dwcfi  save_reg_to_mem, 16, -4
+     995 000000 141A          PUSHM.A   #2,r10                ; [] 
+     996                    .dwcfi  save_reg_to_mem, 10, -8
+     997                    .dwcfi  save_reg_to_mem, 9, -12
+     998                    .dwcfi  cfa_offset, 12
+     999            ;* r10   assigned to addr1
+    1000            $C$DW$75        .dwtag  DW_TAG_variable, DW_AT_name("addr1")
+    1001                    .dwattr $C$DW$75, DW_AT_TI_symbol_name("addr1")
+    1002                    .dwattr $C$DW$75, DW_AT_type(*$C$DW$T$13)
+    1003                    .dwattr $C$DW$75, DW_AT_location[DW_OP_reg10 DW_OP_piece 2 DW_OP_reg9 DW_OP_piece 2]
+    1004            ;* r10   assigned to addr3
+    1005            $C$DW$76        .dwtag  DW_TAG_variable, DW_AT_name("addr3")
+    1006                    .dwattr $C$DW$76, DW_AT_TI_symbol_name("addr3")
+    1007                    .dwattr $C$DW$76, DW_AT_type(*$C$DW$T$13)
+    1008                    .dwattr $C$DW$76, DW_AT_location[DW_OP_reg10 DW_OP_piece 2 DW_OP_reg9 DW_OP_piece 2]
+    1009 000002 0CCA          MOVA      r12,r10               ; [] |123| 
+    1010 000004 0DC9          MOVA      r13,r9                ; [] |123| 
+    1011                    .dwpsn  file "../Flash.c",line 126,column 3,is_stmt,isa 0
+    1012 000006 407C          MOV.B     #5,r12                ; [] |126| 
+         000008 0005 
+    1013            $C$DW$77        .dwtag  DW_TAG_TI_branch
+    1014                    .dwattr $C$DW$77, DW_AT_low_pc(0x00)
+    1015                    .dwattr $C$DW$77, DW_AT_name("flash_m25p80_pwr_up")
+    1016                    .dwattr $C$DW$77, DW_AT_TI_call
+    1017 00000a 13B0!         CALLA     #flash_m25p80_pwr_up  ; [] |126| 
+         00000c 0000 
+    1018                                                      ; [] |126| 
+    1019                    .dwpsn  file "../Flash.c",line 128,column 2,is_stmt,isa 0
+    1020 00000e C2F2          BIC.B     #8,&P3OUT+0           ; [] |128| 
+         000010 0000!
+    1021                    .dwpsn  file "../Flash.c",line 129,column 2,is_stmt,isa 0
+    1022                    .dwpsn  file "../Flash.c",line 131,column 2,is_stmt,isa 0
+    1023 000012 407C          MOV.B     #3,r12                ; [] |131| 
+         000014 0003 
+    1024            $C$DW$78        .dwtag  DW_TAG_TI_branch
+    1025                    .dwattr $C$DW$78, DW_AT_low_pc(0x00)
+    1026                    .dwattr $C$DW$78, DW_AT_name("flash_m25p80_spi_cmd_write")
+    1027                    .dwattr $C$DW$78, DW_AT_TI_call
+    1028 000016 13B0!         CALLA     #flash_m25p80_spi_cmd_write ; [] |131| 
+         000018 0000 
+    1029                                                      ; [] |131| 
+    1030                    .dwpsn  file "../Flash.c",line 132,column 2,is_stmt,isa 0
+    1031 00001a 008C!         MOVX.A    #read+0,r12           ; [] |132| 
+         00001c 0000 
+MSP430 Assembler PC v4.4.3 Sat Aug 08 16:59:34 2015
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+Flash.asm                                                            PAGE   21
+
+    1032            $C$DW$79        .dwtag  DW_TAG_TI_branch
+    1033                    .dwattr $C$DW$79, DW_AT_low_pc(0x00)
+    1034                    .dwattr $C$DW$79, DW_AT_name("print_string")
+    1035                    .dwattr $C$DW$79, DW_AT_TI_call
+    1036 00001e 13B0!         CALLA     #print_string         ; [] |132| 
+         000020 0000 
+    1037                                                      ; [] |132| 
+    1038                    .dwpsn  file "../Flash.c",line 134,column 2,is_stmt,isa 0
+    1039 000022 09CC          MOVA      r9,r12                ; [] |134| 
+    1040            $C$DW$80        .dwtag  DW_TAG_TI_branch
+    1041                    .dwattr $C$DW$80, DW_AT_low_pc(0x00)
+    1042                    .dwattr $C$DW$80, DW_AT_name("flash_m25p80_spi_cmd_write")
+    1043                    .dwattr $C$DW$80, DW_AT_TI_call
+    1044 000024 13B0!         CALLA     #flash_m25p80_spi_cmd_write ; [] |134| 
+         000026 0000 
+    1045                                                      ; [] |134| 
+    1046                    .dwpsn  file "../Flash.c",line 135,column 2,is_stmt,isa 0
+    1047 000028 0ACC          MOVA      r10,r12               ; [] |135| 
+    1048 00002a 09CD          MOVA      r9,r13                ; [] |135| 
+    1049            $C$DW$81        .dwtag  DW_TAG_TI_branch
+    1050                    .dwattr $C$DW$81, DW_AT_low_pc(0x00)
+    1051                    .dwattr $C$DW$81, DW_AT_name("__mspabi_srll_8")
+    1052                    .dwattr $C$DW$81, DW_AT_TI_call
+    1053 00002c 13B0!         CALLA     #__mspabi_srll_8      ; [] |135| 
+         00002e 0000 
+    1054                                                      ; [] |135| 
+    1055            $C$DW$82        .dwtag  DW_TAG_TI_branch
+    1056                    .dwattr $C$DW$82, DW_AT_low_pc(0x00)
+    1057                    .dwattr $C$DW$82, DW_AT_name("flash_m25p80_spi_cmd_write")
+    1058                    .dwattr $C$DW$82, DW_AT_TI_call
+    1059 000030 13B0!         CALLA     #flash_m25p80_spi_cmd_write ; [] |135| 
+         000032 0000 
+    1060                                                      ; [] |135| 
+    1061                    .dwpsn  file "../Flash.c",line 136,column 2,is_stmt,isa 0
+    1062 000034 4A4C          MOV.B     r10,r12               ; [] |136| 
+    1063            $C$DW$83        .dwtag  DW_TAG_TI_branch
+    1064                    .dwattr $C$DW$83, DW_AT_low_pc(0x00)
+    1065                    .dwattr $C$DW$83, DW_AT_name("flash_m25p80_spi_cmd_write")
+    1066                    .dwattr $C$DW$83, DW_AT_TI_call
+    1067 000036 13B0!         CALLA     #flash_m25p80_spi_cmd_write ; [] |136| 
+         000038 0000 
+    1068                                                      ; [] |136| 
+    1069                    .dwpsn  file "../Flash.c",line 138,column 2,is_stmt,isa 0
+    1070 00003a 43C2          MOV.B     #0,&UCA0TXBUF+0       ; [] |138| 
+         00003c 0000!
+    1071                    .dwpsn  file "../Flash.c",line 139,column 2,is_stmt,isa 0
+    1072            $C$DW$84        .dwtag  DW_TAG_TI_branch
+    1073                    .dwattr $C$DW$84, DW_AT_low_pc(0x00)
+    1074                    .dwattr $C$DW$84, DW_AT_name("delay_500_ms")
+    1075                    .dwattr $C$DW$84, DW_AT_TI_call
+    1076 00003e 13B0!         CALLA     #delay_500_ms         ; [] |139| 
+         000040 0000 
+    1077                                                      ; [] |139| 
+    1078                    .dwpsn  file "../Flash.c",line 140,column 2,is_stmt,isa 0
+    1079 000042 42D2          MOV.B     &UCA0RXBUF+0,&data1$3+0 ; [] |140| 
+MSP430 Assembler PC v4.4.3 Sat Aug 08 16:59:34 2015
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+Flash.asm                                                            PAGE   22
+
+         000044 0000!
+         000046 0000!
+    1080                    .dwpsn  file "../Flash.c",line 141,column 2,is_stmt,isa 0
+    1081 000048 425C          MOV.B     &data1$3+0,r12        ; [] |141| 
+         00004a 0000!
+    1082            $C$DW$85        .dwtag  DW_TAG_TI_branch
+    1083                    .dwattr $C$DW$85, DW_AT_low_pc(0x00)
+    1084                    .dwattr $C$DW$85, DW_AT_name("print_raw")
+    1085                    .dwattr $C$DW$85, DW_AT_TI_call
+    1086 00004c 13B0!         CALLA     #print_raw            ; [] |141| 
+         00004e 0000 
+    1087                                                      ; [] |141| 
+    1088                    .dwpsn  file "../Flash.c",line 143,column 2,is_stmt,isa 0
+    1089 000050 D2F2          OR.B      #8,&P3OUT+0           ; [] |143| 
+         000052 0000!
+    1090                    .dwpsn  file "../Flash.c",line 144,column 2,is_stmt,isa 0
+    1091 000054 425C          MOV.B     &data1$3+0,r12        ; [] |144| 
+         000056 0000!
+    1092                    .dwpsn  file "../Flash.c",line 145,column 1,is_stmt,isa 0
+    1093 000058 1619          POPM.A    #2,r10                ; [] 
+    1094                    .dwcfi  restore_reg, 9
+    1095                    .dwcfi  restore_reg, 10
+    1096                    .dwcfi  cfa_offset, 4
+    1097            $C$DW$86        .dwtag  DW_TAG_TI_branch
+    1098                    .dwattr $C$DW$86, DW_AT_low_pc(0x00)
+    1099                    .dwattr $C$DW$86, DW_AT_TI_return
+    1100 00005a 0110          RETA      ; [] 
+    1101                    ; [] 
+    1102                    .dwattr $C$DW$71, DW_AT_TI_end_file("../Flash.c")
+    1103                    .dwattr $C$DW$71, DW_AT_TI_end_line(0x91)
+    1104                    .dwattr $C$DW$71, DW_AT_TI_end_column(0x01)
+    1105                    .dwendentry
+    1106                    .dwendtag $C$DW$71
+    1107            
+    1108 000000               .sect   ".text:TXBufferIsEmpty"
+    1109                    .clink
+    1110                    .global TXBufferIsEmpty
+    1111            
+    1112            $C$DW$87        .dwtag  DW_TAG_subprogram, DW_AT_name("TXBufferIsEmpty")
+    1113                    .dwattr $C$DW$87, DW_AT_low_pc(TXBufferIsEmpty)
+    1114                    .dwattr $C$DW$87, DW_AT_high_pc(0x00)
+    1115                    .dwattr $C$DW$87, DW_AT_TI_symbol_name("TXBufferIsEmpty")
+    1116                    .dwattr $C$DW$87, DW_AT_external
+    1117                    .dwattr $C$DW$87, DW_AT_type(*$C$DW$T$6)
+    1118                    .dwattr $C$DW$87, DW_AT_TI_begin_file("../Flash.c")
+    1119                    .dwattr $C$DW$87, DW_AT_TI_begin_line(0x92)
+    1120                    .dwattr $C$DW$87, DW_AT_TI_begin_column(0x0f)
+    1121                    .dwattr $C$DW$87, DW_AT_decl_file("../Flash.c")
+    1122                    .dwattr $C$DW$87, DW_AT_decl_line(0x92)
+    1123                    .dwattr $C$DW$87, DW_AT_decl_column(0x0f)
+    1124                    .dwattr $C$DW$87, DW_AT_TI_max_frame_size(0x04)
+    1125                    .dwpsn  file "../Flash.c",line 147,column 1,is_stmt,address TXBufferIsEmpty,isa 0
+    1126            
+    1127                    .dwfde $C$DW$CIE, TXBufferIsEmpty
+    1128            
+MSP430 Assembler PC v4.4.3 Sat Aug 08 16:59:34 2015
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+Flash.asm                                                            PAGE   23
+
+    1129            ;*****************************************************************************
+    1130            ;* FUNCTION NAME: TXBufferIsEmpty                                            *
+    1131            ;*                                                                           *
+    1132            ;*   Regs Modified     : SP,SR,r12                                           *
+    1133            ;*   Regs Used         : SP,SR,r12                                           *
+    1134            ;*   Local Frame Size  : 0 Args + 0 Auto + 0 Save = 0 byte                   *
+    1135            ;*****************************************************************************
+    1136 000000       TXBufferIsEmpty:
+    1137            ;* --------------------------------------------------------------------------*
+    1138                    .dwcfi  cfa_offset, 4
+    1139                    .dwcfi  save_reg_to_mem, 16, -4
+    1140                    .dwpsn  file "../Flash.c",line 148,column 2,is_stmt,isa 0
+    1141 000000 432C          MOV.W     #2,r12                ; [] |148| 
+    1142 000002 F25C          AND.B     &IFG2+0,r12           ; [] |148| 
+         000004 0000!
+    1143                    .dwpsn  file "../Flash.c",line 149,column 1,is_stmt,isa 0
+    1144            $C$DW$88        .dwtag  DW_TAG_TI_branch
+    1145                    .dwattr $C$DW$88, DW_AT_low_pc(0x00)
+    1146                    .dwattr $C$DW$88, DW_AT_TI_return
+    1147 000006 0110          RETA      ; [] 
+    1148                    ; [] 
+    1149                    .dwattr $C$DW$87, DW_AT_TI_end_file("../Flash.c")
+    1150                    .dwattr $C$DW$87, DW_AT_TI_end_line(0x95)
+    1151                    .dwattr $C$DW$87, DW_AT_TI_end_column(0x01)
+    1152                    .dwendentry
+    1153                    .dwendtag $C$DW$87
+    1154            
+    1155 000000               .sect   ".text:RXBufferIsEmpty"
+    1156                    .clink
+    1157                    .global RXBufferIsEmpty
+    1158            
+    1159            $C$DW$89        .dwtag  DW_TAG_subprogram, DW_AT_name("RXBufferIsEmpty")
+    1160                    .dwattr $C$DW$89, DW_AT_low_pc(RXBufferIsEmpty)
+    1161                    .dwattr $C$DW$89, DW_AT_high_pc(0x00)
+    1162                    .dwattr $C$DW$89, DW_AT_TI_symbol_name("RXBufferIsEmpty")
+    1163                    .dwattr $C$DW$89, DW_AT_external
+    1164                    .dwattr $C$DW$89, DW_AT_type(*$C$DW$T$6)
+    1165                    .dwattr $C$DW$89, DW_AT_TI_begin_file("../Flash.c")
+    1166                    .dwattr $C$DW$89, DW_AT_TI_begin_line(0x97)
+    1167                    .dwattr $C$DW$89, DW_AT_TI_begin_column(0x0f)
+    1168                    .dwattr $C$DW$89, DW_AT_decl_file("../Flash.c")
+    1169                    .dwattr $C$DW$89, DW_AT_decl_line(0x97)
+    1170                    .dwattr $C$DW$89, DW_AT_decl_column(0x0f)
+    1171                    .dwattr $C$DW$89, DW_AT_TI_max_frame_size(0x04)
+    1172                    .dwpsn  file "../Flash.c",line 152,column 1,is_stmt,address RXBufferIsEmpty,isa 0
+    1173            
+    1174                    .dwfde $C$DW$CIE, RXBufferIsEmpty
+    1175            
+    1176            ;*****************************************************************************
+    1177            ;* FUNCTION NAME: RXBufferIsEmpty                                            *
+    1178            ;*                                                                           *
+    1179            ;*   Regs Modified     : SP,SR,r12                                           *
+    1180            ;*   Regs Used         : SP,SR,r12                                           *
+    1181            ;*   Local Frame Size  : 0 Args + 0 Auto + 0 Save = 0 byte                   *
+    1182            ;*****************************************************************************
+MSP430 Assembler PC v4.4.3 Sat Aug 08 16:59:34 2015
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+Flash.asm                                                            PAGE   24
+
+    1183 000000       RXBufferIsEmpty:
+    1184            ;* --------------------------------------------------------------------------*
+    1185                    .dwcfi  cfa_offset, 4
+    1186                    .dwcfi  save_reg_to_mem, 16, -4
+    1187                    .dwpsn  file "../Flash.c",line 153,column 2,is_stmt,isa 0
+    1188 000000 431C          MOV.W     #1,r12                ; [] |153| 
+    1189 000002 F25C          AND.B     &IFG2+0,r12           ; [] |153| 
+         000004 0000!
+    1190                    .dwpsn  file "../Flash.c",line 154,column 1,is_stmt,isa 0
+    1191            $C$DW$90        .dwtag  DW_TAG_TI_branch
+    1192                    .dwattr $C$DW$90, DW_AT_low_pc(0x00)
+    1193                    .dwattr $C$DW$90, DW_AT_TI_return
+    1194 000006 0110          RETA      ; [] 
+    1195                    ; [] 
+    1196                    .dwattr $C$DW$89, DW_AT_TI_end_file("../Flash.c")
+    1197                    .dwattr $C$DW$89, DW_AT_TI_end_line(0x9a)
+    1198                    .dwattr $C$DW$89, DW_AT_TI_end_column(0x01)
+    1199                    .dwendentry
+    1200                    .dwendtag $C$DW$89
+    1201            
+    1202            ;*****************************************************************************
+    1203            ;* UNDEFINED EXTERNAL REFERENCES                                             *
+    1204            ;*****************************************************************************
+    1205                    .global delay_500_ms
+    1206                    .global print_string
+    1207                    .global print_raw
+    1208                    .global IE2
+    1209                    .global IFG2
+    1210                    .global DCOCTL
+    1211                    .global BCSCTL1
+    1212                    .global P3OUT
+    1213                    .global P3DIR
+    1214                    .global P3SEL
+    1215                    .global UCA0CTL0
+    1216                    .global UCA0CTL1
+    1217                    .global UCA0BR0
+    1218                    .global UCA0BR1
+    1219                    .global UCA0MCTL
+    1220                    .global UCA0RXBUF
+    1221                    .global UCA0TXBUF
+    1222                    .global __mspabi_srll_8
+    1223            
+    1224            ;******************************************************************************
+    1225            ;* BUILD ATTRIBUTES                                                           *
+    1226            ;******************************************************************************
+    1227                    .battr "TI", Tag_File, 1, Tag_LPM_INFO(1)
+    1228                    .battr "TI", Tag_File, 1, Tag_PORTS_INIT_INFO("012345678901ABCDEFGHIJ0111111110001000000000000
+    1229                    .battr "TI", Tag_File, 1, Tag_HW_MPY32_INFO(1)
+    1230                    .battr "TI", Tag_File, 1, Tag_HW_MPY_ISR_INFO(1)
+    1231                    .battr "TI", Tag_File, 1, Tag_HW_MPY_INLINE_INFO(1)
+    1232                    .battr "mspabi", Tag_File, 1, Tag_enum_size(2)
+    1233            
+    1234            ;******************************************************************************
+    1235            ;* TYPE INFORMATION                                                           *
+    1236            ;******************************************************************************
+MSP430 Assembler PC v4.4.3 Sat Aug 08 16:59:34 2015
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+Flash.asm                                                            PAGE   25
+
+    1237            $C$DW$T$2       .dwtag  DW_TAG_unspecified_type
+    1238                    .dwattr $C$DW$T$2, DW_AT_name("void")
+    1239            
+    1240            $C$DW$T$27      .dwtag  DW_TAG_subroutine_type
+    1241                    .dwattr $C$DW$T$27, DW_AT_language(DW_LANG_C)
+    1242            $C$DW$T$28      .dwtag  DW_TAG_pointer_type
+    1243                    .dwattr $C$DW$T$28, DW_AT_type(*$C$DW$T$27)
+    1244                    .dwattr $C$DW$T$28, DW_AT_address_class(0x14)
+    1245            $C$DW$T$29      .dwtag  DW_TAG_typedef, DW_AT_name("__SFR_FARPTR")
+    1246                    .dwattr $C$DW$T$29, DW_AT_type(*$C$DW$T$28)
+    1247                    .dwattr $C$DW$T$29, DW_AT_language(DW_LANG_C)
+    1248                    .dwattr $C$DW$T$29, DW_AT_decl_file("D:/Program Files/ccsv6/ccs_base/msp430/include/msp430f261
+    1249                    .dwattr $C$DW$T$29, DW_AT_decl_line(0x47)
+    1250                    .dwattr $C$DW$T$29, DW_AT_decl_column(0x11)
+    1251            $C$DW$T$4       .dwtag  DW_TAG_base_type
+    1252                    .dwattr $C$DW$T$4, DW_AT_encoding(DW_ATE_boolean)
+    1253                    .dwattr $C$DW$T$4, DW_AT_name("bool")
+    1254                    .dwattr $C$DW$T$4, DW_AT_byte_size(0x01)
+    1255            $C$DW$T$5       .dwtag  DW_TAG_base_type
+    1256                    .dwattr $C$DW$T$5, DW_AT_encoding(DW_ATE_signed_char)
+    1257                    .dwattr $C$DW$T$5, DW_AT_name("signed char")
+    1258                    .dwattr $C$DW$T$5, DW_AT_byte_size(0x01)
+    1259            $C$DW$T$6       .dwtag  DW_TAG_base_type
+    1260                    .dwattr $C$DW$T$6, DW_AT_encoding(DW_ATE_unsigned_char)
+    1261                    .dwattr $C$DW$T$6, DW_AT_name("unsigned char")
+    1262                    .dwattr $C$DW$T$6, DW_AT_byte_size(0x01)
+    1263            $C$DW$91        .dwtag  DW_TAG_TI_far_type
+    1264                    .dwattr $C$DW$91, DW_AT_type(*$C$DW$T$6)
+    1265            $C$DW$T$36      .dwtag  DW_TAG_volatile_type
+    1266                    .dwattr $C$DW$T$36, DW_AT_type(*$C$DW$91)
+    1267            $C$DW$T$7       .dwtag  DW_TAG_base_type
+    1268                    .dwattr $C$DW$T$7, DW_AT_encoding(DW_ATE_signed_char)
+    1269                    .dwattr $C$DW$T$7, DW_AT_name("wchar_t")
+    1270                    .dwattr $C$DW$T$7, DW_AT_byte_size(0x02)
+    1271            $C$DW$T$8       .dwtag  DW_TAG_base_type
+    1272                    .dwattr $C$DW$T$8, DW_AT_encoding(DW_ATE_signed)
+    1273                    .dwattr $C$DW$T$8, DW_AT_name("short")
+    1274                    .dwattr $C$DW$T$8, DW_AT_byte_size(0x02)
+    1275            $C$DW$T$9       .dwtag  DW_TAG_base_type
+    1276                    .dwattr $C$DW$T$9, DW_AT_encoding(DW_ATE_unsigned)
+    1277                    .dwattr $C$DW$T$9, DW_AT_name("unsigned short")
+    1278                    .dwattr $C$DW$T$9, DW_AT_byte_size(0x02)
+    1279            $C$DW$T$10      .dwtag  DW_TAG_base_type
+    1280                    .dwattr $C$DW$T$10, DW_AT_encoding(DW_ATE_signed)
+    1281                    .dwattr $C$DW$T$10, DW_AT_name("int")
+    1282                    .dwattr $C$DW$T$10, DW_AT_byte_size(0x02)
+    1283            $C$DW$T$11      .dwtag  DW_TAG_base_type
+    1284                    .dwattr $C$DW$T$11, DW_AT_encoding(DW_ATE_unsigned)
+    1285                    .dwattr $C$DW$T$11, DW_AT_name("unsigned int")
+    1286                    .dwattr $C$DW$T$11, DW_AT_byte_size(0x02)
+    1287            $C$DW$92        .dwtag  DW_TAG_TI_far_type
+    1288                    .dwattr $C$DW$92, DW_AT_type(*$C$DW$T$11)
+    1289            $C$DW$T$33      .dwtag  DW_TAG_const_type
+    1290                    .dwattr $C$DW$T$33, DW_AT_type(*$C$DW$92)
+    1291            $C$DW$T$12      .dwtag  DW_TAG_base_type
+MSP430 Assembler PC v4.4.3 Sat Aug 08 16:59:34 2015
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+Flash.asm                                                            PAGE   26
+
+    1292                    .dwattr $C$DW$T$12, DW_AT_encoding(DW_ATE_signed)
+    1293                    .dwattr $C$DW$T$12, DW_AT_name("long")
+    1294                    .dwattr $C$DW$T$12, DW_AT_byte_size(0x04)
+    1295            $C$DW$T$13      .dwtag  DW_TAG_base_type
+    1296                    .dwattr $C$DW$T$13, DW_AT_encoding(DW_ATE_unsigned)
+    1297                    .dwattr $C$DW$T$13, DW_AT_name("unsigned long")
+    1298                    .dwattr $C$DW$T$13, DW_AT_byte_size(0x04)
+    1299            $C$DW$T$14      .dwtag  DW_TAG_base_type
+    1300                    .dwattr $C$DW$T$14, DW_AT_encoding(DW_ATE_signed)
+    1301                    .dwattr $C$DW$T$14, DW_AT_name("long long")
+    1302                    .dwattr $C$DW$T$14, DW_AT_byte_size(0x08)
+    1303            $C$DW$T$15      .dwtag  DW_TAG_base_type
+    1304                    .dwattr $C$DW$T$15, DW_AT_encoding(DW_ATE_unsigned)
+    1305                    .dwattr $C$DW$T$15, DW_AT_name("unsigned long long")
+    1306                    .dwattr $C$DW$T$15, DW_AT_byte_size(0x08)
+    1307            $C$DW$T$16      .dwtag  DW_TAG_base_type
+    1308                    .dwattr $C$DW$T$16, DW_AT_encoding(DW_ATE_float)
+    1309                    .dwattr $C$DW$T$16, DW_AT_name("float")
+    1310                    .dwattr $C$DW$T$16, DW_AT_byte_size(0x04)
+    1311            $C$DW$T$17      .dwtag  DW_TAG_base_type
+    1312                    .dwattr $C$DW$T$17, DW_AT_encoding(DW_ATE_float)
+    1313                    .dwattr $C$DW$T$17, DW_AT_name("double")
+    1314                    .dwattr $C$DW$T$17, DW_AT_byte_size(0x08)
+    1315            $C$DW$T$18      .dwtag  DW_TAG_base_type
+    1316                    .dwattr $C$DW$T$18, DW_AT_encoding(DW_ATE_float)
+    1317                    .dwattr $C$DW$T$18, DW_AT_name("long double")
+    1318                    .dwattr $C$DW$T$18, DW_AT_byte_size(0x08)
+    1319            $C$DW$T$22      .dwtag  DW_TAG_pointer_type
+    1320                    .dwattr $C$DW$T$22, DW_AT_type(*$C$DW$T$6)
+    1321                    .dwattr $C$DW$T$22, DW_AT_address_class(0x14)
+    1322            $C$DW$T$40      .dwtag  DW_TAG_typedef, DW_AT_name("__builtin_va_list")
+    1323                    .dwattr $C$DW$T$40, DW_AT_type(*$C$DW$T$22)
+    1324                    .dwattr $C$DW$T$40, DW_AT_language(DW_LANG_C)
+    1325                    .dwattr $C$DW$T$40, DW_AT_decl_file("../Flash.c")
+    1326                    .dwattr $C$DW$T$40, DW_AT_decl_line(0x9a)
+    1327                    .dwattr $C$DW$T$40, DW_AT_decl_column(0x01)
+    1328            
+    1329            $C$DW$T$41      .dwtag  DW_TAG_array_type
+    1330                    .dwattr $C$DW$T$41, DW_AT_type(*$C$DW$T$6)
+    1331                    .dwattr $C$DW$T$41, DW_AT_language(DW_LANG_C)
+    1332                    .dwattr $C$DW$T$41, DW_AT_byte_size(0x35)
+    1333            $C$DW$93        .dwtag  DW_TAG_subrange_type
+    1334                    .dwattr $C$DW$93, DW_AT_upper_bound(0x34)
+    1335                    .dwendtag $C$DW$T$41
+    1336            
+    1337            
+    1338            $C$DW$T$42      .dwtag  DW_TAG_array_type
+    1339                    .dwattr $C$DW$T$42, DW_AT_type(*$C$DW$T$6)
+    1340                    .dwattr $C$DW$T$42, DW_AT_language(DW_LANG_C)
+    1341                    .dwattr $C$DW$T$42, DW_AT_byte_size(0x2b)
+    1342            $C$DW$94        .dwtag  DW_TAG_subrange_type
+    1343                    .dwattr $C$DW$94, DW_AT_upper_bound(0x2a)
+    1344                    .dwendtag $C$DW$T$42
+    1345            
+    1346            
+MSP430 Assembler PC v4.4.3 Sat Aug 08 16:59:34 2015
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+Flash.asm                                                            PAGE   27
+
+    1347            $C$DW$T$43      .dwtag  DW_TAG_enumeration_type
+    1348                    .dwattr $C$DW$T$43, DW_AT_name("print_ctrl_defs")
+    1349                    .dwattr $C$DW$T$43, DW_AT_byte_size(0x02)
+    1350            $C$DW$95        .dwtag  DW_TAG_enumerator, DW_AT_name("EEPROM"), DW_AT_const_value(0x01)
+    1351                    .dwattr $C$DW$95, DW_AT_decl_file("F:\Study\MTech\Project\PUFF DATA IIT-M(From Anthony)\PUF Ge
+    1352                    .dwattr $C$DW$95, DW_AT_decl_line(0x06)
+    1353                    .dwattr $C$DW$95, DW_AT_decl_column(0x02)
+    1354            $C$DW$96        .dwtag  DW_TAG_enumerator, DW_AT_name("SVS"), DW_AT_const_value(0x02)
+    1355                    .dwattr $C$DW$96, DW_AT_decl_file("F:\Study\MTech\Project\PUFF DATA IIT-M(From Anthony)\PUF Ge
+    1356                    .dwattr $C$DW$96, DW_AT_decl_line(0x07)
+    1357                    .dwattr $C$DW$96, DW_AT_decl_column(0x02)
+    1358            $C$DW$97        .dwtag  DW_TAG_enumerator, DW_AT_name("FLASH"), DW_AT_const_value(0x03)
+    1359                    .dwattr $C$DW$97, DW_AT_decl_file("F:\Study\MTech\Project\PUFF DATA IIT-M(From Anthony)\PUF Ge
+    1360                    .dwattr $C$DW$97, DW_AT_decl_line(0x08)
+    1361                    .dwattr $C$DW$97, DW_AT_decl_column(0x02)
+    1362            $C$DW$98        .dwtag  DW_TAG_enumerator, DW_AT_name("FUEL_GUAGE"), DW_AT_const_value(0x04)
+    1363                    .dwattr $C$DW$98, DW_AT_decl_file("F:\Study\MTech\Project\PUFF DATA IIT-M(From Anthony)\PUF Ge
+    1364                    .dwattr $C$DW$98, DW_AT_decl_line(0x09)
+    1365                    .dwattr $C$DW$98, DW_AT_decl_column(0x02)
+    1366            $C$DW$99        .dwtag  DW_TAG_enumerator, DW_AT_name("LIGHT_SENSOR"), DW_AT_const_value(0x05)
+    1367                    .dwattr $C$DW$99, DW_AT_decl_file("F:\Study\MTech\Project\PUFF DATA IIT-M(From Anthony)\PUF Ge
+    1368                    .dwattr $C$DW$99, DW_AT_decl_line(0x0a)
+    1369                    .dwattr $C$DW$99, DW_AT_decl_column(0x02)
+    1370            $C$DW$100       .dwtag  DW_TAG_enumerator, DW_AT_name("TEMPERATURE_SENSOR"), DW_AT_const_value(0x06)
+    1371                    .dwattr $C$DW$100, DW_AT_decl_file("F:\Study\MTech\Project\PUFF DATA IIT-M(From Anthony)\PUF G
+    1372                    .dwattr $C$DW$100, DW_AT_decl_line(0x0b)
+    1373                    .dwattr $C$DW$100, DW_AT_decl_column(0x02)
+    1374            $C$DW$101       .dwtag  DW_TAG_enumerator, DW_AT_name("PROXIMITY_SENSOR"), DW_AT_const_value(0x07)
+    1375                    .dwattr $C$DW$101, DW_AT_decl_file("F:\Study\MTech\Project\PUFF DATA IIT-M(From Anthony)\PUF G
+    1376                    .dwattr $C$DW$101, DW_AT_decl_line(0x0c)
+    1377                    .dwattr $C$DW$101, DW_AT_decl_column(0x02)
+    1378            $C$DW$102       .dwtag  DW_TAG_enumerator, DW_AT_name("PRESSURE_SENSOR"), DW_AT_const_value(0x08)
+    1379                    .dwattr $C$DW$102, DW_AT_decl_file("F:\Study\MTech\Project\PUFF DATA IIT-M(From Anthony)\PUF G
+    1380                    .dwattr $C$DW$102, DW_AT_decl_line(0x0d)
+    1381                    .dwattr $C$DW$102, DW_AT_decl_column(0x02)
+    1382            $C$DW$103       .dwtag  DW_TAG_enumerator, DW_AT_name("ADC"), DW_AT_const_value(0x09)
+    1383                    .dwattr $C$DW$103, DW_AT_decl_file("F:\Study\MTech\Project\PUFF DATA IIT-M(From Anthony)\PUF G
+    1384                    .dwattr $C$DW$103, DW_AT_decl_line(0x0e)
+    1385                    .dwattr $C$DW$103, DW_AT_decl_column(0x02)
+    1386            $C$DW$104       .dwtag  DW_TAG_enumerator, DW_AT_name("IO_EXPANDER"), DW_AT_const_value(0x0a)
+    1387                    .dwattr $C$DW$104, DW_AT_decl_file("F:\Study\MTech\Project\PUFF DATA IIT-M(From Anthony)\PUF G
+    1388                    .dwattr $C$DW$104, DW_AT_decl_line(0x0f)
+    1389                    .dwattr $C$DW$104, DW_AT_decl_column(0x02)
+    1390            $C$DW$105       .dwtag  DW_TAG_enumerator, DW_AT_name("RTC"), DW_AT_const_value(0x0b)
+    1391                    .dwattr $C$DW$105, DW_AT_decl_file("F:\Study\MTech\Project\PUFF DATA IIT-M(From Anthony)\PUF G
+    1392                    .dwattr $C$DW$105, DW_AT_decl_line(0x10)
+    1393                    .dwattr $C$DW$105, DW_AT_decl_column(0x02)
+    1394                    .dwendtag $C$DW$T$43
+    1395            
+    1396                    .dwattr $C$DW$T$43, DW_AT_decl_file("F:\Study\MTech\Project\PUFF DATA IIT-M(From Anthony)\PUF 
+    1397                    .dwattr $C$DW$T$43, DW_AT_decl_line(0x05)
+    1398                    .dwattr $C$DW$T$43, DW_AT_decl_column(0x06)
+    1399                    .dwattr $C$DW$CU, DW_AT_language(DW_LANG_C)
+    1400            
+    1401            ;***************************************************************
+MSP430 Assembler PC v4.4.3 Sat Aug 08 16:59:34 2015
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+Flash.asm                                                            PAGE   28
+
+    1402            ;* DWARF CIE ENTRIES                                           *
+    1403            ;***************************************************************
+    1404            
+    1405            $C$DW$CIE       .dwcie 16
+    1406                    .dwcfi  cfa_register, 1
+    1407                    .dwcfi  cfa_offset, 0
+    1408                    .dwcfi  same_value, 0
+    1409                    .dwcfi  same_value, 1
+    1410                    .dwcfi  undefined, 2
+    1411                    .dwcfi  same_value, 3
+    1412                    .dwcfi  same_value, 4
+    1413                    .dwcfi  same_value, 5
+    1414                    .dwcfi  same_value, 6
+    1415                    .dwcfi  same_value, 7
+    1416                    .dwcfi  same_value, 8
+    1417                    .dwcfi  same_value, 9
+    1418                    .dwcfi  same_value, 10
+    1419                    .dwcfi  undefined, 11
+    1420                    .dwcfi  undefined, 12
+    1421                    .dwcfi  undefined, 13
+    1422                    .dwcfi  undefined, 14
+    1423                    .dwcfi  undefined, 15
+    1424                    .dwcfi  undefined, 16
+    1425                    .dwendentry
+    1426            
+    1427            ;***************************************************************
+    1428            ;* DWARF REGISTER MAP                                          *
+    1429            ;***************************************************************
+    1430            
+    1431            $C$DW$106       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("PC")
+    1432                    .dwattr $C$DW$106, DW_AT_location[DW_OP_reg0]
+    1433            $C$DW$107       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("SP")
+    1434                    .dwattr $C$DW$107, DW_AT_location[DW_OP_reg1]
+    1435            $C$DW$108       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("SR")
+    1436                    .dwattr $C$DW$108, DW_AT_location[DW_OP_reg2]
+    1437            $C$DW$109       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("CG")
+    1438                    .dwattr $C$DW$109, DW_AT_location[DW_OP_reg3]
+    1439            $C$DW$110       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("r4")
+    1440                    .dwattr $C$DW$110, DW_AT_location[DW_OP_reg4]
+    1441            $C$DW$111       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("r5")
+    1442                    .dwattr $C$DW$111, DW_AT_location[DW_OP_reg5]
+    1443            $C$DW$112       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("r6")
+    1444                    .dwattr $C$DW$112, DW_AT_location[DW_OP_reg6]
+    1445            $C$DW$113       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("r7")
+    1446                    .dwattr $C$DW$113, DW_AT_location[DW_OP_reg7]
+    1447            $C$DW$114       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("r8")
+    1448                    .dwattr $C$DW$114, DW_AT_location[DW_OP_reg8]
+    1449            $C$DW$115       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("r9")
+    1450                    .dwattr $C$DW$115, DW_AT_location[DW_OP_reg9]
+    1451            $C$DW$116       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("r10")
+    1452                    .dwattr $C$DW$116, DW_AT_location[DW_OP_reg10]
+    1453            $C$DW$117       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("r11")
+    1454                    .dwattr $C$DW$117, DW_AT_location[DW_OP_reg11]
+    1455            $C$DW$118       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("r12")
+    1456                    .dwattr $C$DW$118, DW_AT_location[DW_OP_reg12]
+MSP430 Assembler PC v4.4.3 Sat Aug 08 16:59:34 2015
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+Flash.asm                                                            PAGE   29
+
+    1457            $C$DW$119       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("r13")
+    1458                    .dwattr $C$DW$119, DW_AT_location[DW_OP_reg13]
+    1459            $C$DW$120       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("r14")
+    1460                    .dwattr $C$DW$120, DW_AT_location[DW_OP_reg14]
+    1461            $C$DW$121       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("r15")
+    1462                    .dwattr $C$DW$121, DW_AT_location[DW_OP_reg15]
+    1463            $C$DW$122       .dwtag  DW_TAG_TI_assign_register, DW_AT_name("CIE_RETA")
+    1464                    .dwattr $C$DW$122, DW_AT_location[DW_OP_reg16]
+    1465                    .dwendtag $C$DW$CU
+    1466            
+
+No Assembly Errors, No Assembly Warnings

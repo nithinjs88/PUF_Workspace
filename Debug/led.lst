@@ -1,0 +1,743 @@
+MSP430 Assembler PC v4.4.3 Sat Aug 08 16:57:45 2015
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+led.asm                                                              PAGE    1
+
+       1            ;******************************************************************************
+       2            ;* MSP430 C/C++ Codegen                                             PC v4.4.3 *
+       3            ;* Date/Time created: Sat Aug 08 16:57:45 2015                                *
+       4            ;******************************************************************************
+       5                    .compiler_opts --abi=eabi --diag_wrap=off --hll_source=on --mem_model:code=large --mem_model:d
+       6            
+       7            $C$DW$CU        .dwtag  DW_TAG_compile_unit
+       8                    .dwattr $C$DW$CU, DW_AT_name("../led.c")
+       9                    .dwattr $C$DW$CU, DW_AT_producer("TI MSP430 C/C++ Codegen PC v4.4.3 Copyright (c) 2003-2015 Te
+      10                    .dwattr $C$DW$CU, DW_AT_TI_version(0x01)
+      11                    .dwattr $C$DW$CU, DW_AT_comp_dir("F:\Study\Work\CCS_Workspace\PUF\Debug")
+      12            $C$DW$1 .dwtag  DW_TAG_variable, DW_AT_name("P5OUT")
+      13                    .dwattr $C$DW$1, DW_AT_TI_symbol_name("P5OUT")
+      14                    .dwattr $C$DW$1, DW_AT_type(*$C$DW$T$23)
+      15                    .dwattr $C$DW$1, DW_AT_declaration
+      16                    .dwattr $C$DW$1, DW_AT_external
+      17                    .dwattr $C$DW$1, DW_AT_decl_file("D:/Program Files/ccsv6/ccs_base/msp430/include/msp430f2618.h
+      18                    .dwattr $C$DW$1, DW_AT_decl_line(0x34e)
+      19                    .dwattr $C$DW$1, DW_AT_decl_column(0x01)
+      20            $C$DW$2 .dwtag  DW_TAG_variable, DW_AT_name("P5DIR")
+      21                    .dwattr $C$DW$2, DW_AT_TI_symbol_name("P5DIR")
+      22                    .dwattr $C$DW$2, DW_AT_type(*$C$DW$T$23)
+      23                    .dwattr $C$DW$2, DW_AT_declaration
+      24                    .dwattr $C$DW$2, DW_AT_external
+      25                    .dwattr $C$DW$2, DW_AT_decl_file("D:/Program Files/ccsv6/ccs_base/msp430/include/msp430f2618.h
+      26                    .dwattr $C$DW$2, DW_AT_decl_line(0x34f)
+      27                    .dwattr $C$DW$2, DW_AT_decl_column(0x01)
+      28            ;       D:\Program Files\ccsv6\tools\compiler\ti-cgt-msp430_4.4.3\bin\opt430.exe C:\\Users\\user\\AppD
+      29 000000               .sect   ".text:LED_INIT"
+      30                    .clink
+      31                    .global LED_INIT
+      32            
+      33            $C$DW$3 .dwtag  DW_TAG_subprogram, DW_AT_name("LED_INIT")
+      34                    .dwattr $C$DW$3, DW_AT_low_pc(LED_INIT)
+      35                    .dwattr $C$DW$3, DW_AT_high_pc(0x00)
+      36                    .dwattr $C$DW$3, DW_AT_TI_symbol_name("LED_INIT")
+      37                    .dwattr $C$DW$3, DW_AT_external
+      38                    .dwattr $C$DW$3, DW_AT_TI_begin_file("../led.c")
+      39                    .dwattr $C$DW$3, DW_AT_TI_begin_line(0x04)
+      40                    .dwattr $C$DW$3, DW_AT_TI_begin_column(0x06)
+      41                    .dwattr $C$DW$3, DW_AT_decl_file("../led.c")
+      42                    .dwattr $C$DW$3, DW_AT_decl_line(0x04)
+      43                    .dwattr $C$DW$3, DW_AT_decl_column(0x06)
+      44                    .dwattr $C$DW$3, DW_AT_TI_max_frame_size(0x04)
+      45                    .dwpsn  file "../led.c",line 4,column 20,is_stmt,address LED_INIT,isa 0
+      46            
+      47                    .dwfde $C$DW$CIE, LED_INIT
+      48            
+      49            ;*****************************************************************************
+      50            ;* FUNCTION NAME: LED_INIT                                                   *
+      51            ;*                                                                           *
+      52            ;*   Regs Modified     : SP                                                  *
+      53            ;*   Regs Used         : SP                                                  *
+      54            ;*   Local Frame Size  : 0 Args + 0 Auto + 0 Save = 0 byte                   *
+      55            ;*****************************************************************************
+MSP430 Assembler PC v4.4.3 Sat Aug 08 16:57:45 2015
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+led.asm                                                              PAGE    2
+
+      56 000000       LED_INIT:
+      57            ;* --------------------------------------------------------------------------*
+      58                    .dwcfi  cfa_offset, 4
+      59                    .dwcfi  save_reg_to_mem, 16, -4
+      60                    .dwpsn  file "../led.c",line 6,column 2,is_stmt,isa 0
+      61 000000 40F2          MOV.B     #112,&P5DIR+0         ; [] |6| 
+         000002 0070 
+         000004 0000!
+      62                    .dwpsn  file "../led.c",line 7,column 1,is_stmt,isa 0
+      63            $C$DW$4 .dwtag  DW_TAG_TI_branch
+      64                    .dwattr $C$DW$4, DW_AT_low_pc(0x00)
+      65                    .dwattr $C$DW$4, DW_AT_TI_return
+      66 000006 0110          RETA      ; [] 
+      67                    ; [] 
+      68                    .dwattr $C$DW$3, DW_AT_TI_end_file("../led.c")
+      69                    .dwattr $C$DW$3, DW_AT_TI_end_line(0x07)
+      70                    .dwattr $C$DW$3, DW_AT_TI_end_column(0x01)
+      71                    .dwendentry
+      72                    .dwendtag $C$DW$3
+      73            
+      74 000000               .sect   ".text:LED0_ON"
+      75                    .clink
+      76                    .global LED0_ON
+      77            
+      78            $C$DW$5 .dwtag  DW_TAG_subprogram, DW_AT_name("LED0_ON")
+      79                    .dwattr $C$DW$5, DW_AT_low_pc(LED0_ON)
+      80                    .dwattr $C$DW$5, DW_AT_high_pc(0x00)
+      81                    .dwattr $C$DW$5, DW_AT_TI_symbol_name("LED0_ON")
+      82                    .dwattr $C$DW$5, DW_AT_external
+      83                    .dwattr $C$DW$5, DW_AT_TI_begin_file("../led.c")
+      84                    .dwattr $C$DW$5, DW_AT_TI_begin_line(0x09)
+      85                    .dwattr $C$DW$5, DW_AT_TI_begin_column(0x06)
+      86                    .dwattr $C$DW$5, DW_AT_decl_file("../led.c")
+      87                    .dwattr $C$DW$5, DW_AT_decl_line(0x09)
+      88                    .dwattr $C$DW$5, DW_AT_decl_column(0x06)
+      89                    .dwattr $C$DW$5, DW_AT_TI_max_frame_size(0x04)
+      90                    .dwpsn  file "../led.c",line 10,column 1,is_stmt,address LED0_ON,isa 0
+      91            
+      92                    .dwfde $C$DW$CIE, LED0_ON
+      93            
+      94            ;*****************************************************************************
+      95            ;* FUNCTION NAME: LED0_ON                                                    *
+      96            ;*                                                                           *
+      97            ;*   Regs Modified     : SP,SR                                               *
+      98            ;*   Regs Used         : SP,SR                                               *
+      99            ;*   Local Frame Size  : 0 Args + 0 Auto + 0 Save = 0 byte                   *
+     100            ;*****************************************************************************
+     101 000000       LED0_ON:
+     102            ;* --------------------------------------------------------------------------*
+     103                    .dwcfi  cfa_offset, 4
+     104                    .dwcfi  save_reg_to_mem, 16, -4
+     105                    .dwpsn  file "../led.c",line 11,column 2,is_stmt,isa 0
+     106 000000 F0F2          AND.B     #239,&P5OUT+0         ; [] |11| 
+         000002 00EF 
+         000004 0000!
+MSP430 Assembler PC v4.4.3 Sat Aug 08 16:57:45 2015
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+led.asm                                                              PAGE    3
+
+     107                    .dwpsn  file "../led.c",line 12,column 1,is_stmt,isa 0
+     108            $C$DW$6 .dwtag  DW_TAG_TI_branch
+     109                    .dwattr $C$DW$6, DW_AT_low_pc(0x00)
+     110                    .dwattr $C$DW$6, DW_AT_TI_return
+     111 000006 0110          RETA      ; [] 
+     112                    ; [] 
+     113                    .dwattr $C$DW$5, DW_AT_TI_end_file("../led.c")
+     114                    .dwattr $C$DW$5, DW_AT_TI_end_line(0x0c)
+     115                    .dwattr $C$DW$5, DW_AT_TI_end_column(0x01)
+     116                    .dwendentry
+     117                    .dwendtag $C$DW$5
+     118            
+     119 000000               .sect   ".text:LED0_OFF"
+     120                    .clink
+     121                    .global LED0_OFF
+     122            
+     123            $C$DW$7 .dwtag  DW_TAG_subprogram, DW_AT_name("LED0_OFF")
+     124                    .dwattr $C$DW$7, DW_AT_low_pc(LED0_OFF)
+     125                    .dwattr $C$DW$7, DW_AT_high_pc(0x00)
+     126                    .dwattr $C$DW$7, DW_AT_TI_symbol_name("LED0_OFF")
+     127                    .dwattr $C$DW$7, DW_AT_external
+     128                    .dwattr $C$DW$7, DW_AT_TI_begin_file("../led.c")
+     129                    .dwattr $C$DW$7, DW_AT_TI_begin_line(0x0e)
+     130                    .dwattr $C$DW$7, DW_AT_TI_begin_column(0x06)
+     131                    .dwattr $C$DW$7, DW_AT_decl_file("../led.c")
+     132                    .dwattr $C$DW$7, DW_AT_decl_line(0x0e)
+     133                    .dwattr $C$DW$7, DW_AT_decl_column(0x06)
+     134                    .dwattr $C$DW$7, DW_AT_TI_max_frame_size(0x04)
+     135                    .dwpsn  file "../led.c",line 15,column 1,is_stmt,address LED0_OFF,isa 0
+     136            
+     137                    .dwfde $C$DW$CIE, LED0_OFF
+     138            
+     139            ;*****************************************************************************
+     140            ;* FUNCTION NAME: LED0_OFF                                                   *
+     141            ;*                                                                           *
+     142            ;*   Regs Modified     : SP                                                  *
+     143            ;*   Regs Used         : SP                                                  *
+     144            ;*   Local Frame Size  : 0 Args + 0 Auto + 0 Save = 0 byte                   *
+     145            ;*****************************************************************************
+     146 000000       LED0_OFF:
+     147            ;* --------------------------------------------------------------------------*
+     148                    .dwcfi  cfa_offset, 4
+     149                    .dwcfi  save_reg_to_mem, 16, -4
+     150                    .dwpsn  file "../led.c",line 16,column 2,is_stmt,isa 0
+     151 000000 D0F2          OR.B      #16,&P5OUT+0          ; [] |16| 
+         000002 0010 
+         000004 0000!
+     152                    .dwpsn  file "../led.c",line 17,column 1,is_stmt,isa 0
+     153            $C$DW$8 .dwtag  DW_TAG_TI_branch
+     154                    .dwattr $C$DW$8, DW_AT_low_pc(0x00)
+     155                    .dwattr $C$DW$8, DW_AT_TI_return
+     156 000006 0110          RETA      ; [] 
+     157                    ; [] 
+     158                    .dwattr $C$DW$7, DW_AT_TI_end_file("../led.c")
+     159                    .dwattr $C$DW$7, DW_AT_TI_end_line(0x11)
+MSP430 Assembler PC v4.4.3 Sat Aug 08 16:57:45 2015
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+led.asm                                                              PAGE    4
+
+     160                    .dwattr $C$DW$7, DW_AT_TI_end_column(0x01)
+     161                    .dwendentry
+     162                    .dwendtag $C$DW$7
+     163            
+     164 000000               .sect   ".text:LED0_TOGGLE"
+     165                    .clink
+     166                    .global LED0_TOGGLE
+     167            
+     168            $C$DW$9 .dwtag  DW_TAG_subprogram, DW_AT_name("LED0_TOGGLE")
+     169                    .dwattr $C$DW$9, DW_AT_low_pc(LED0_TOGGLE)
+     170                    .dwattr $C$DW$9, DW_AT_high_pc(0x00)
+     171                    .dwattr $C$DW$9, DW_AT_TI_symbol_name("LED0_TOGGLE")
+     172                    .dwattr $C$DW$9, DW_AT_external
+     173                    .dwattr $C$DW$9, DW_AT_TI_begin_file("../led.c")
+     174                    .dwattr $C$DW$9, DW_AT_TI_begin_line(0x13)
+     175                    .dwattr $C$DW$9, DW_AT_TI_begin_column(0x06)
+     176                    .dwattr $C$DW$9, DW_AT_decl_file("../led.c")
+     177                    .dwattr $C$DW$9, DW_AT_decl_line(0x13)
+     178                    .dwattr $C$DW$9, DW_AT_decl_column(0x06)
+     179                    .dwattr $C$DW$9, DW_AT_TI_max_frame_size(0x04)
+     180                    .dwpsn  file "../led.c",line 20,column 1,is_stmt,address LED0_TOGGLE,isa 0
+     181            
+     182                    .dwfde $C$DW$CIE, LED0_TOGGLE
+     183            
+     184            ;*****************************************************************************
+     185            ;* FUNCTION NAME: LED0_TOGGLE                                                *
+     186            ;*                                                                           *
+     187            ;*   Regs Modified     : SP,SR                                               *
+     188            ;*   Regs Used         : SP,SR                                               *
+     189            ;*   Local Frame Size  : 0 Args + 0 Auto + 0 Save = 0 byte                   *
+     190            ;*****************************************************************************
+     191 000000       LED0_TOGGLE:
+     192            ;* --------------------------------------------------------------------------*
+     193                    .dwcfi  cfa_offset, 4
+     194                    .dwcfi  save_reg_to_mem, 16, -4
+     195                    .dwpsn  file "../led.c",line 26,column 11,is_stmt,isa 0
+     196 000000 E0F2          XOR.B     #16,&P5OUT+0          ; [] |26| 
+         000002 0010 
+         000004 0000!
+     197                    .dwpsn  file "../led.c",line 28,column 1,is_stmt,isa 0
+     198            $C$DW$10        .dwtag  DW_TAG_TI_branch
+     199                    .dwattr $C$DW$10, DW_AT_low_pc(0x00)
+     200                    .dwattr $C$DW$10, DW_AT_TI_return
+     201 000006 0110          RETA      ; [] 
+     202                    ; [] 
+     203                    .dwattr $C$DW$9, DW_AT_TI_end_file("../led.c")
+     204                    .dwattr $C$DW$9, DW_AT_TI_end_line(0x1c)
+     205                    .dwattr $C$DW$9, DW_AT_TI_end_column(0x01)
+     206                    .dwendentry
+     207                    .dwendtag $C$DW$9
+     208            
+     209 000000               .sect   ".text:LED1_ON"
+     210                    .clink
+     211                    .global LED1_ON
+     212            
+MSP430 Assembler PC v4.4.3 Sat Aug 08 16:57:45 2015
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+led.asm                                                              PAGE    5
+
+     213            $C$DW$11        .dwtag  DW_TAG_subprogram, DW_AT_name("LED1_ON")
+     214                    .dwattr $C$DW$11, DW_AT_low_pc(LED1_ON)
+     215                    .dwattr $C$DW$11, DW_AT_high_pc(0x00)
+     216                    .dwattr $C$DW$11, DW_AT_TI_symbol_name("LED1_ON")
+     217                    .dwattr $C$DW$11, DW_AT_external
+     218                    .dwattr $C$DW$11, DW_AT_TI_begin_file("../led.c")
+     219                    .dwattr $C$DW$11, DW_AT_TI_begin_line(0x1f)
+     220                    .dwattr $C$DW$11, DW_AT_TI_begin_column(0x06)
+     221                    .dwattr $C$DW$11, DW_AT_decl_file("../led.c")
+     222                    .dwattr $C$DW$11, DW_AT_decl_line(0x1f)
+     223                    .dwattr $C$DW$11, DW_AT_decl_column(0x06)
+     224                    .dwattr $C$DW$11, DW_AT_TI_max_frame_size(0x04)
+     225                    .dwpsn  file "../led.c",line 32,column 1,is_stmt,address LED1_ON,isa 0
+     226            
+     227                    .dwfde $C$DW$CIE, LED1_ON
+     228            
+     229            ;*****************************************************************************
+     230            ;* FUNCTION NAME: LED1_ON                                                    *
+     231            ;*                                                                           *
+     232            ;*   Regs Modified     : SP,SR                                               *
+     233            ;*   Regs Used         : SP,SR                                               *
+     234            ;*   Local Frame Size  : 0 Args + 0 Auto + 0 Save = 0 byte                   *
+     235            ;*****************************************************************************
+     236 000000       LED1_ON:
+     237            ;* --------------------------------------------------------------------------*
+     238                    .dwcfi  cfa_offset, 4
+     239                    .dwcfi  save_reg_to_mem, 16, -4
+     240                    .dwpsn  file "../led.c",line 33,column 2,is_stmt,isa 0
+     241 000000 F0F2          AND.B     #223,&P5OUT+0         ; [] |33| 
+         000002 00DF 
+         000004 0000!
+     242                    .dwpsn  file "../led.c",line 34,column 1,is_stmt,isa 0
+     243            $C$DW$12        .dwtag  DW_TAG_TI_branch
+     244                    .dwattr $C$DW$12, DW_AT_low_pc(0x00)
+     245                    .dwattr $C$DW$12, DW_AT_TI_return
+     246 000006 0110          RETA      ; [] 
+     247                    ; [] 
+     248                    .dwattr $C$DW$11, DW_AT_TI_end_file("../led.c")
+     249                    .dwattr $C$DW$11, DW_AT_TI_end_line(0x22)
+     250                    .dwattr $C$DW$11, DW_AT_TI_end_column(0x01)
+     251                    .dwendentry
+     252                    .dwendtag $C$DW$11
+     253            
+     254 000000               .sect   ".text:LED1_OFF"
+     255                    .clink
+     256                    .global LED1_OFF
+     257            
+     258            $C$DW$13        .dwtag  DW_TAG_subprogram, DW_AT_name("LED1_OFF")
+     259                    .dwattr $C$DW$13, DW_AT_low_pc(LED1_OFF)
+     260                    .dwattr $C$DW$13, DW_AT_high_pc(0x00)
+     261                    .dwattr $C$DW$13, DW_AT_TI_symbol_name("LED1_OFF")
+     262                    .dwattr $C$DW$13, DW_AT_external
+     263                    .dwattr $C$DW$13, DW_AT_TI_begin_file("../led.c")
+     264                    .dwattr $C$DW$13, DW_AT_TI_begin_line(0x24)
+     265                    .dwattr $C$DW$13, DW_AT_TI_begin_column(0x06)
+MSP430 Assembler PC v4.4.3 Sat Aug 08 16:57:45 2015
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+led.asm                                                              PAGE    6
+
+     266                    .dwattr $C$DW$13, DW_AT_decl_file("../led.c")
+     267                    .dwattr $C$DW$13, DW_AT_decl_line(0x24)
+     268                    .dwattr $C$DW$13, DW_AT_decl_column(0x06)
+     269                    .dwattr $C$DW$13, DW_AT_TI_max_frame_size(0x04)
+     270                    .dwpsn  file "../led.c",line 37,column 1,is_stmt,address LED1_OFF,isa 0
+     271            
+     272                    .dwfde $C$DW$CIE, LED1_OFF
+     273            
+     274            ;*****************************************************************************
+     275            ;* FUNCTION NAME: LED1_OFF                                                   *
+     276            ;*                                                                           *
+     277            ;*   Regs Modified     : SP                                                  *
+     278            ;*   Regs Used         : SP                                                  *
+     279            ;*   Local Frame Size  : 0 Args + 0 Auto + 0 Save = 0 byte                   *
+     280            ;*****************************************************************************
+     281 000000       LED1_OFF:
+     282            ;* --------------------------------------------------------------------------*
+     283                    .dwcfi  cfa_offset, 4
+     284                    .dwcfi  save_reg_to_mem, 16, -4
+     285                    .dwpsn  file "../led.c",line 38,column 2,is_stmt,isa 0
+     286 000000 D0F2          OR.B      #32,&P5OUT+0          ; [] |38| 
+         000002 0020 
+         000004 0000!
+     287                    .dwpsn  file "../led.c",line 39,column 1,is_stmt,isa 0
+     288            $C$DW$14        .dwtag  DW_TAG_TI_branch
+     289                    .dwattr $C$DW$14, DW_AT_low_pc(0x00)
+     290                    .dwattr $C$DW$14, DW_AT_TI_return
+     291 000006 0110          RETA      ; [] 
+     292                    ; [] 
+     293                    .dwattr $C$DW$13, DW_AT_TI_end_file("../led.c")
+     294                    .dwattr $C$DW$13, DW_AT_TI_end_line(0x27)
+     295                    .dwattr $C$DW$13, DW_AT_TI_end_column(0x01)
+     296                    .dwendentry
+     297                    .dwendtag $C$DW$13
+     298            
+     299 000000               .sect   ".text:LED1_TOGGLE"
+     300                    .clink
+     301                    .global LED1_TOGGLE
+     302            
+     303            $C$DW$15        .dwtag  DW_TAG_subprogram, DW_AT_name("LED1_TOGGLE")
+     304                    .dwattr $C$DW$15, DW_AT_low_pc(LED1_TOGGLE)
+     305                    .dwattr $C$DW$15, DW_AT_high_pc(0x00)
+     306                    .dwattr $C$DW$15, DW_AT_TI_symbol_name("LED1_TOGGLE")
+     307                    .dwattr $C$DW$15, DW_AT_external
+     308                    .dwattr $C$DW$15, DW_AT_TI_begin_file("../led.c")
+     309                    .dwattr $C$DW$15, DW_AT_TI_begin_line(0x29)
+     310                    .dwattr $C$DW$15, DW_AT_TI_begin_column(0x06)
+     311                    .dwattr $C$DW$15, DW_AT_decl_file("../led.c")
+     312                    .dwattr $C$DW$15, DW_AT_decl_line(0x29)
+     313                    .dwattr $C$DW$15, DW_AT_decl_column(0x06)
+     314                    .dwattr $C$DW$15, DW_AT_TI_max_frame_size(0x04)
+     315                    .dwpsn  file "../led.c",line 42,column 1,is_stmt,address LED1_TOGGLE,isa 0
+     316            
+     317                    .dwfde $C$DW$CIE, LED1_TOGGLE
+     318            
+MSP430 Assembler PC v4.4.3 Sat Aug 08 16:57:45 2015
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+led.asm                                                              PAGE    7
+
+     319            ;*****************************************************************************
+     320            ;* FUNCTION NAME: LED1_TOGGLE                                                *
+     321            ;*                                                                           *
+     322            ;*   Regs Modified     : SP,SR                                               *
+     323            ;*   Regs Used         : SP,SR                                               *
+     324            ;*   Local Frame Size  : 0 Args + 0 Auto + 0 Save = 0 byte                   *
+     325            ;*****************************************************************************
+     326 000000       LED1_TOGGLE:
+     327            ;* --------------------------------------------------------------------------*
+     328                    .dwcfi  cfa_offset, 4
+     329                    .dwcfi  save_reg_to_mem, 16, -4
+     330                    .dwpsn  file "../led.c",line 48,column 11,is_stmt,isa 0
+     331 000000 E0F2          XOR.B     #32,&P5OUT+0          ; [] |48| 
+         000002 0020 
+         000004 0000!
+     332                    .dwpsn  file "../led.c",line 50,column 1,is_stmt,isa 0
+     333            $C$DW$16        .dwtag  DW_TAG_TI_branch
+     334                    .dwattr $C$DW$16, DW_AT_low_pc(0x00)
+     335                    .dwattr $C$DW$16, DW_AT_TI_return
+     336 000006 0110          RETA      ; [] 
+     337                    ; [] 
+     338                    .dwattr $C$DW$15, DW_AT_TI_end_file("../led.c")
+     339                    .dwattr $C$DW$15, DW_AT_TI_end_line(0x32)
+     340                    .dwattr $C$DW$15, DW_AT_TI_end_column(0x01)
+     341                    .dwendentry
+     342                    .dwendtag $C$DW$15
+     343            
+     344 000000               .sect   ".text:LED2_ON"
+     345                    .clink
+     346                    .global LED2_ON
+     347            
+     348            $C$DW$17        .dwtag  DW_TAG_subprogram, DW_AT_name("LED2_ON")
+     349                    .dwattr $C$DW$17, DW_AT_low_pc(LED2_ON)
+     350                    .dwattr $C$DW$17, DW_AT_high_pc(0x00)
+     351                    .dwattr $C$DW$17, DW_AT_TI_symbol_name("LED2_ON")
+     352                    .dwattr $C$DW$17, DW_AT_external
+     353                    .dwattr $C$DW$17, DW_AT_TI_begin_file("../led.c")
+     354                    .dwattr $C$DW$17, DW_AT_TI_begin_line(0x35)
+     355                    .dwattr $C$DW$17, DW_AT_TI_begin_column(0x06)
+     356                    .dwattr $C$DW$17, DW_AT_decl_file("../led.c")
+     357                    .dwattr $C$DW$17, DW_AT_decl_line(0x35)
+     358                    .dwattr $C$DW$17, DW_AT_decl_column(0x06)
+     359                    .dwattr $C$DW$17, DW_AT_TI_max_frame_size(0x04)
+     360                    .dwpsn  file "../led.c",line 54,column 1,is_stmt,address LED2_ON,isa 0
+     361            
+     362                    .dwfde $C$DW$CIE, LED2_ON
+     363            
+     364            ;*****************************************************************************
+     365            ;* FUNCTION NAME: LED2_ON                                                    *
+     366            ;*                                                                           *
+     367            ;*   Regs Modified     : SP,SR                                               *
+     368            ;*   Regs Used         : SP,SR                                               *
+     369            ;*   Local Frame Size  : 0 Args + 0 Auto + 0 Save = 0 byte                   *
+     370            ;*****************************************************************************
+     371 000000       LED2_ON:
+MSP430 Assembler PC v4.4.3 Sat Aug 08 16:57:45 2015
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+led.asm                                                              PAGE    8
+
+     372            ;* --------------------------------------------------------------------------*
+     373                    .dwcfi  cfa_offset, 4
+     374                    .dwcfi  save_reg_to_mem, 16, -4
+     375                    .dwpsn  file "../led.c",line 55,column 2,is_stmt,isa 0
+     376 000000 F0F2          AND.B     #191,&P5OUT+0         ; [] |55| 
+         000002 00BF 
+         000004 0000!
+     377                    .dwpsn  file "../led.c",line 56,column 1,is_stmt,isa 0
+     378            $C$DW$18        .dwtag  DW_TAG_TI_branch
+     379                    .dwattr $C$DW$18, DW_AT_low_pc(0x00)
+     380                    .dwattr $C$DW$18, DW_AT_TI_return
+     381 000006 0110          RETA      ; [] 
+     382                    ; [] 
+     383                    .dwattr $C$DW$17, DW_AT_TI_end_file("../led.c")
+     384                    .dwattr $C$DW$17, DW_AT_TI_end_line(0x38)
+     385                    .dwattr $C$DW$17, DW_AT_TI_end_column(0x01)
+     386                    .dwendentry
+     387                    .dwendtag $C$DW$17
+     388            
+     389 000000               .sect   ".text:LED2_OFF"
+     390                    .clink
+     391                    .global LED2_OFF
+     392            
+     393            $C$DW$19        .dwtag  DW_TAG_subprogram, DW_AT_name("LED2_OFF")
+     394                    .dwattr $C$DW$19, DW_AT_low_pc(LED2_OFF)
+     395                    .dwattr $C$DW$19, DW_AT_high_pc(0x00)
+     396                    .dwattr $C$DW$19, DW_AT_TI_symbol_name("LED2_OFF")
+     397                    .dwattr $C$DW$19, DW_AT_external
+     398                    .dwattr $C$DW$19, DW_AT_TI_begin_file("../led.c")
+     399                    .dwattr $C$DW$19, DW_AT_TI_begin_line(0x3a)
+     400                    .dwattr $C$DW$19, DW_AT_TI_begin_column(0x06)
+     401                    .dwattr $C$DW$19, DW_AT_decl_file("../led.c")
+     402                    .dwattr $C$DW$19, DW_AT_decl_line(0x3a)
+     403                    .dwattr $C$DW$19, DW_AT_decl_column(0x06)
+     404                    .dwattr $C$DW$19, DW_AT_TI_max_frame_size(0x04)
+     405                    .dwpsn  file "../led.c",line 59,column 1,is_stmt,address LED2_OFF,isa 0
+     406            
+     407                    .dwfde $C$DW$CIE, LED2_OFF
+     408            
+     409            ;*****************************************************************************
+     410            ;* FUNCTION NAME: LED2_OFF                                                   *
+     411            ;*                                                                           *
+     412            ;*   Regs Modified     : SP                                                  *
+     413            ;*   Regs Used         : SP                                                  *
+     414            ;*   Local Frame Size  : 0 Args + 0 Auto + 0 Save = 0 byte                   *
+     415            ;*****************************************************************************
+     416 000000       LED2_OFF:
+     417            ;* --------------------------------------------------------------------------*
+     418                    .dwcfi  cfa_offset, 4
+     419                    .dwcfi  save_reg_to_mem, 16, -4
+     420                    .dwpsn  file "../led.c",line 60,column 2,is_stmt,isa 0
+     421 000000 D0F2          OR.B      #64,&P5OUT+0          ; [] |60| 
+         000002 0040 
+         000004 0000!
+     422                    .dwpsn  file "../led.c",line 61,column 1,is_stmt,isa 0
+MSP430 Assembler PC v4.4.3 Sat Aug 08 16:57:45 2015
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+led.asm                                                              PAGE    9
+
+     423            $C$DW$20        .dwtag  DW_TAG_TI_branch
+     424                    .dwattr $C$DW$20, DW_AT_low_pc(0x00)
+     425                    .dwattr $C$DW$20, DW_AT_TI_return
+     426 000006 0110          RETA      ; [] 
+     427                    ; [] 
+     428                    .dwattr $C$DW$19, DW_AT_TI_end_file("../led.c")
+     429                    .dwattr $C$DW$19, DW_AT_TI_end_line(0x3d)
+     430                    .dwattr $C$DW$19, DW_AT_TI_end_column(0x01)
+     431                    .dwendentry
+     432                    .dwendtag $C$DW$19
+     433            
+     434 000000               .sect   ".text:LED2_TOGGLE"
+     435                    .clink
+     436                    .global LED2_TOGGLE
+     437            
+     438            $C$DW$21        .dwtag  DW_TAG_subprogram, DW_AT_name("LED2_TOGGLE")
+     439                    .dwattr $C$DW$21, DW_AT_low_pc(LED2_TOGGLE)
+     440                    .dwattr $C$DW$21, DW_AT_high_pc(0x00)
+     441                    .dwattr $C$DW$21, DW_AT_TI_symbol_name("LED2_TOGGLE")
+     442                    .dwattr $C$DW$21, DW_AT_external
+     443                    .dwattr $C$DW$21, DW_AT_TI_begin_file("../led.c")
+     444                    .dwattr $C$DW$21, DW_AT_TI_begin_line(0x3f)
+     445                    .dwattr $C$DW$21, DW_AT_TI_begin_column(0x06)
+     446                    .dwattr $C$DW$21, DW_AT_decl_file("../led.c")
+     447                    .dwattr $C$DW$21, DW_AT_decl_line(0x3f)
+     448                    .dwattr $C$DW$21, DW_AT_decl_column(0x06)
+     449                    .dwattr $C$DW$21, DW_AT_TI_max_frame_size(0x04)
+     450                    .dwpsn  file "../led.c",line 64,column 1,is_stmt,address LED2_TOGGLE,isa 0
+     451            
+     452                    .dwfde $C$DW$CIE, LED2_TOGGLE
+     453            
+     454            ;*****************************************************************************
+     455            ;* FUNCTION NAME: LED2_TOGGLE                                                *
+     456            ;*                                                                           *
+     457            ;*   Regs Modified     : SP,SR                                               *
+     458            ;*   Regs Used         : SP,SR                                               *
+     459            ;*   Local Frame Size  : 0 Args + 0 Auto + 0 Save = 0 byte                   *
+     460            ;*****************************************************************************
+     461 000000       LED2_TOGGLE:
+     462            ;* --------------------------------------------------------------------------*
+     463                    .dwcfi  cfa_offset, 4
+     464                    .dwcfi  save_reg_to_mem, 16, -4
+     465                    .dwpsn  file "../led.c",line 65,column 2,is_stmt,isa 0
+     466 000000 40F2          MOV.B     #64,&P5OUT+0          ; [] |65| 
+         000002 0040 
+         000004 0000!
+     467                    .dwpsn  file "../led.c",line 70,column 11,is_stmt,isa 0
+     468 000006 E0F2          XOR.B     #64,&P5OUT+0          ; [] |70| 
+         000008 0040 
+         00000a 0000!
+     469                    .dwpsn  file "../led.c",line 72,column 1,is_stmt,isa 0
+     470            $C$DW$22        .dwtag  DW_TAG_TI_branch
+     471                    .dwattr $C$DW$22, DW_AT_low_pc(0x00)
+     472                    .dwattr $C$DW$22, DW_AT_TI_return
+     473 00000c 0110          RETA      ; [] 
+MSP430 Assembler PC v4.4.3 Sat Aug 08 16:57:45 2015
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+led.asm                                                              PAGE   10
+
+     474                    ; [] 
+     475                    .dwattr $C$DW$21, DW_AT_TI_end_file("../led.c")
+     476                    .dwattr $C$DW$21, DW_AT_TI_end_line(0x48)
+     477                    .dwattr $C$DW$21, DW_AT_TI_end_column(0x01)
+     478                    .dwendentry
+     479                    .dwendtag $C$DW$21
+     480            
+     481            ;*****************************************************************************
+     482            ;* UNDEFINED EXTERNAL REFERENCES                                             *
+     483            ;*****************************************************************************
+     484                    .global P5OUT
+     485                    .global P5DIR
+     486            
+     487            ;******************************************************************************
+     488            ;* BUILD ATTRIBUTES                                                           *
+     489            ;******************************************************************************
+     490                    .battr "TI", Tag_File, 1, Tag_LPM_INFO(1)
+     491                    .battr "TI", Tag_File, 1, Tag_PORTS_INIT_INFO("012345678901ABCDEFGHIJ0111111110001000000000000
+     492                    .battr "TI", Tag_File, 1, Tag_HW_MPY32_INFO(1)
+     493                    .battr "TI", Tag_File, 1, Tag_HW_MPY_ISR_INFO(1)
+     494                    .battr "TI", Tag_File, 1, Tag_HW_MPY_INLINE_INFO(1)
+     495                    .battr "mspabi", Tag_File, 1, Tag_enum_size(3)
+     496            
+     497            ;******************************************************************************
+     498            ;* TYPE INFORMATION                                                           *
+     499            ;******************************************************************************
+     500            $C$DW$T$2       .dwtag  DW_TAG_unspecified_type
+     501                    .dwattr $C$DW$T$2, DW_AT_name("void")
+     502            
+     503            $C$DW$T$20      .dwtag  DW_TAG_subroutine_type
+     504                    .dwattr $C$DW$T$20, DW_AT_language(DW_LANG_C)
+     505            $C$DW$T$21      .dwtag  DW_TAG_pointer_type
+     506                    .dwattr $C$DW$T$21, DW_AT_type(*$C$DW$T$20)
+     507                    .dwattr $C$DW$T$21, DW_AT_address_class(0x14)
+     508            $C$DW$T$22      .dwtag  DW_TAG_typedef, DW_AT_name("__SFR_FARPTR")
+     509                    .dwattr $C$DW$T$22, DW_AT_type(*$C$DW$T$21)
+     510                    .dwattr $C$DW$T$22, DW_AT_language(DW_LANG_C)
+     511                    .dwattr $C$DW$T$22, DW_AT_decl_file("D:/Program Files/ccsv6/ccs_base/msp430/include/msp430f261
+     512                    .dwattr $C$DW$T$22, DW_AT_decl_line(0x47)
+     513                    .dwattr $C$DW$T$22, DW_AT_decl_column(0x11)
+     514            $C$DW$T$4       .dwtag  DW_TAG_base_type
+     515                    .dwattr $C$DW$T$4, DW_AT_encoding(DW_ATE_boolean)
+     516                    .dwattr $C$DW$T$4, DW_AT_name("bool")
+     517                    .dwattr $C$DW$T$4, DW_AT_byte_size(0x01)
+     518            $C$DW$T$5       .dwtag  DW_TAG_base_type
+     519                    .dwattr $C$DW$T$5, DW_AT_encoding(DW_ATE_signed_char)
+     520                    .dwattr $C$DW$T$5, DW_AT_name("signed char")
+     521                    .dwattr $C$DW$T$5, DW_AT_byte_size(0x01)
+     522            $C$DW$T$6       .dwtag  DW_TAG_base_type
+     523                    .dwattr $C$DW$T$6, DW_AT_encoding(DW_ATE_unsigned_char)
+     524                    .dwattr $C$DW$T$6, DW_AT_name("unsigned char")
+     525                    .dwattr $C$DW$T$6, DW_AT_byte_size(0x01)
+     526            $C$DW$23        .dwtag  DW_TAG_TI_far_type
+     527                    .dwattr $C$DW$23, DW_AT_type(*$C$DW$T$6)
+     528            $C$DW$T$23      .dwtag  DW_TAG_volatile_type
+MSP430 Assembler PC v4.4.3 Sat Aug 08 16:57:45 2015
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+led.asm                                                              PAGE   11
+
+     529                    .dwattr $C$DW$T$23, DW_AT_type(*$C$DW$23)
+     530            $C$DW$T$7       .dwtag  DW_TAG_base_type
+     531                    .dwattr $C$DW$T$7, DW_AT_encoding(DW_ATE_signed_char)
+     532                    .dwattr $C$DW$T$7, DW_AT_name("wchar_t")
+     533                    .dwattr $C$DW$T$7, DW_AT_byte_size(0x02)
+     534            $C$DW$T$8       .dwtag  DW_TAG_base_type
+     535                    .dwattr $C$DW$T$8, DW_AT_encoding(DW_ATE_signed)
+     536                    .dwattr $C$DW$T$8, DW_AT_name("short")
+     537                    .dwattr $C$DW$T$8, DW_AT_byte_size(0x02)
+     538            $C$DW$T$9       .dwtag  DW_TAG_base_type
+     539                    .dwattr $C$DW$T$9, DW_AT_encoding(DW_ATE_unsigned)
+     540                    .dwattr $C$DW$T$9, DW_AT_name("unsigned short")
+     541                    .dwattr $C$DW$T$9, DW_AT_byte_size(0x02)
+     542            $C$DW$T$10      .dwtag  DW_TAG_base_type
+     543                    .dwattr $C$DW$T$10, DW_AT_encoding(DW_ATE_signed)
+     544                    .dwattr $C$DW$T$10, DW_AT_name("int")
+     545                    .dwattr $C$DW$T$10, DW_AT_byte_size(0x02)
+     546            $C$DW$T$11      .dwtag  DW_TAG_base_type
+     547                    .dwattr $C$DW$T$11, DW_AT_encoding(DW_ATE_unsigned)
+     548                    .dwattr $C$DW$T$11, DW_AT_name("unsigned int")
+     549                    .dwattr $C$DW$T$11, DW_AT_byte_size(0x02)
+     550            $C$DW$T$12      .dwtag  DW_TAG_base_type
+     551                    .dwattr $C$DW$T$12, DW_AT_encoding(DW_ATE_signed)
+     552                    .dwattr $C$DW$T$12, DW_AT_name("long")
+     553                    .dwattr $C$DW$T$12, DW_AT_byte_size(0x04)
+     554            $C$DW$T$13      .dwtag  DW_TAG_base_type
+     555                    .dwattr $C$DW$T$13, DW_AT_encoding(DW_ATE_unsigned)
+     556                    .dwattr $C$DW$T$13, DW_AT_name("unsigned long")
+     557                    .dwattr $C$DW$T$13, DW_AT_byte_size(0x04)
+     558            $C$DW$T$14      .dwtag  DW_TAG_base_type
+     559                    .dwattr $C$DW$T$14, DW_AT_encoding(DW_ATE_signed)
+     560                    .dwattr $C$DW$T$14, DW_AT_name("long long")
+     561                    .dwattr $C$DW$T$14, DW_AT_byte_size(0x08)
+     562            $C$DW$T$15      .dwtag  DW_TAG_base_type
+     563                    .dwattr $C$DW$T$15, DW_AT_encoding(DW_ATE_unsigned)
+     564                    .dwattr $C$DW$T$15, DW_AT_name("unsigned long long")
+     565                    .dwattr $C$DW$T$15, DW_AT_byte_size(0x08)
+     566            $C$DW$T$16      .dwtag  DW_TAG_base_type
+     567                    .dwattr $C$DW$T$16, DW_AT_encoding(DW_ATE_float)
+     568                    .dwattr $C$DW$T$16, DW_AT_name("float")
+     569                    .dwattr $C$DW$T$16, DW_AT_byte_size(0x04)
+     570            $C$DW$T$17      .dwtag  DW_TAG_base_type
+     571                    .dwattr $C$DW$T$17, DW_AT_encoding(DW_ATE_float)
+     572                    .dwattr $C$DW$T$17, DW_AT_name("double")
+     573                    .dwattr $C$DW$T$17, DW_AT_byte_size(0x08)
+     574            $C$DW$T$18      .dwtag  DW_TAG_base_type
+     575                    .dwattr $C$DW$T$18, DW_AT_encoding(DW_ATE_float)
+     576                    .dwattr $C$DW$T$18, DW_AT_name("long double")
+     577                    .dwattr $C$DW$T$18, DW_AT_byte_size(0x08)
+     578            $C$DW$T$25      .dwtag  DW_TAG_pointer_type
+     579                    .dwattr $C$DW$T$25, DW_AT_type(*$C$DW$T$6)
+     580                    .dwattr $C$DW$T$25, DW_AT_address_class(0x14)
+     581            $C$DW$T$26      .dwtag  DW_TAG_typedef, DW_AT_name("__builtin_va_list")
+     582                    .dwattr $C$DW$T$26, DW_AT_type(*$C$DW$T$25)
+     583                    .dwattr $C$DW$T$26, DW_AT_language(DW_LANG_C)
+MSP430 Assembler PC v4.4.3 Sat Aug 08 16:57:45 2015
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+led.asm                                                              PAGE   12
+
+     584                    .dwattr $C$DW$T$26, DW_AT_decl_file("../led.c")
+     585                    .dwattr $C$DW$T$26, DW_AT_decl_line(0x48)
+     586                    .dwattr $C$DW$T$26, DW_AT_decl_column(0x01)
+     587                    .dwattr $C$DW$CU, DW_AT_language(DW_LANG_C)
+     588            
+     589            ;***************************************************************
+     590            ;* DWARF CIE ENTRIES                                           *
+     591            ;***************************************************************
+     592            
+     593            $C$DW$CIE       .dwcie 16
+     594                    .dwcfi  cfa_register, 1
+     595                    .dwcfi  cfa_offset, 0
+     596                    .dwcfi  same_value, 0
+     597                    .dwcfi  same_value, 1
+     598                    .dwcfi  undefined, 2
+     599                    .dwcfi  same_value, 3
+     600                    .dwcfi  same_value, 4
+     601                    .dwcfi  same_value, 5
+     602                    .dwcfi  same_value, 6
+     603                    .dwcfi  same_value, 7
+     604                    .dwcfi  same_value, 8
+     605                    .dwcfi  same_value, 9
+     606                    .dwcfi  same_value, 10
+     607                    .dwcfi  undefined, 11
+     608                    .dwcfi  undefined, 12
+     609                    .dwcfi  undefined, 13
+     610                    .dwcfi  undefined, 14
+     611                    .dwcfi  undefined, 15
+     612                    .dwcfi  undefined, 16
+     613                    .dwendentry
+     614            
+     615            ;***************************************************************
+     616            ;* DWARF REGISTER MAP                                          *
+     617            ;***************************************************************
+     618            
+     619            $C$DW$24        .dwtag  DW_TAG_TI_assign_register, DW_AT_name("PC")
+     620                    .dwattr $C$DW$24, DW_AT_location[DW_OP_reg0]
+     621            $C$DW$25        .dwtag  DW_TAG_TI_assign_register, DW_AT_name("SP")
+     622                    .dwattr $C$DW$25, DW_AT_location[DW_OP_reg1]
+     623            $C$DW$26        .dwtag  DW_TAG_TI_assign_register, DW_AT_name("SR")
+     624                    .dwattr $C$DW$26, DW_AT_location[DW_OP_reg2]
+     625            $C$DW$27        .dwtag  DW_TAG_TI_assign_register, DW_AT_name("CG")
+     626                    .dwattr $C$DW$27, DW_AT_location[DW_OP_reg3]
+     627            $C$DW$28        .dwtag  DW_TAG_TI_assign_register, DW_AT_name("r4")
+     628                    .dwattr $C$DW$28, DW_AT_location[DW_OP_reg4]
+     629            $C$DW$29        .dwtag  DW_TAG_TI_assign_register, DW_AT_name("r5")
+     630                    .dwattr $C$DW$29, DW_AT_location[DW_OP_reg5]
+     631            $C$DW$30        .dwtag  DW_TAG_TI_assign_register, DW_AT_name("r6")
+     632                    .dwattr $C$DW$30, DW_AT_location[DW_OP_reg6]
+     633            $C$DW$31        .dwtag  DW_TAG_TI_assign_register, DW_AT_name("r7")
+     634                    .dwattr $C$DW$31, DW_AT_location[DW_OP_reg7]
+     635            $C$DW$32        .dwtag  DW_TAG_TI_assign_register, DW_AT_name("r8")
+     636                    .dwattr $C$DW$32, DW_AT_location[DW_OP_reg8]
+     637            $C$DW$33        .dwtag  DW_TAG_TI_assign_register, DW_AT_name("r9")
+     638                    .dwattr $C$DW$33, DW_AT_location[DW_OP_reg9]
+MSP430 Assembler PC v4.4.3 Sat Aug 08 16:57:45 2015
+
+Tools Copyright (c) 2003-2015 Texas Instruments Incorporated
+led.asm                                                              PAGE   13
+
+     639            $C$DW$34        .dwtag  DW_TAG_TI_assign_register, DW_AT_name("r10")
+     640                    .dwattr $C$DW$34, DW_AT_location[DW_OP_reg10]
+     641            $C$DW$35        .dwtag  DW_TAG_TI_assign_register, DW_AT_name("r11")
+     642                    .dwattr $C$DW$35, DW_AT_location[DW_OP_reg11]
+     643            $C$DW$36        .dwtag  DW_TAG_TI_assign_register, DW_AT_name("r12")
+     644                    .dwattr $C$DW$36, DW_AT_location[DW_OP_reg12]
+     645            $C$DW$37        .dwtag  DW_TAG_TI_assign_register, DW_AT_name("r13")
+     646                    .dwattr $C$DW$37, DW_AT_location[DW_OP_reg13]
+     647            $C$DW$38        .dwtag  DW_TAG_TI_assign_register, DW_AT_name("r14")
+     648                    .dwattr $C$DW$38, DW_AT_location[DW_OP_reg14]
+     649            $C$DW$39        .dwtag  DW_TAG_TI_assign_register, DW_AT_name("r15")
+     650                    .dwattr $C$DW$39, DW_AT_location[DW_OP_reg15]
+     651            $C$DW$40        .dwtag  DW_TAG_TI_assign_register, DW_AT_name("CIE_RETA")
+     652                    .dwattr $C$DW$40, DW_AT_location[DW_OP_reg16]
+     653                    .dwendtag $C$DW$CU
+     654            
+
+No Assembly Errors, No Assembly Warnings
